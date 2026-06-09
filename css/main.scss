@@ -1,0 +1,19 @@
+//Vendor CSS
+@import url("vendor/reset.css");
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Marcellus&family=Noto+Serif+TC:wght@200..900&display=swap');
+// Global CSS
+@import "abstracts/define";
+@import "abstracts/global";
+
+// LAYOUT CSS
+@import "layout/header";
+@import "layout/footer";
+//@import "layout/radio_checkbox";
+//@import "layout/button";
+@import "layout/form";
+//@import "layout/dialog";
+
+//@import "layout/dropdown";
+
+// Pages CSS
+@import "pages/detail";

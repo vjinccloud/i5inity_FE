@@ -1,0 +1,253 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 4;    
+    transition: 0.5s ease;    
+    background-color: #133C2E;
+    .header-div {
+        position: relative;        
+        .block-outer{
+            max-width: 1300px;
+        }
+        .brand-navi{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;          
+
+        }    
+        .brand {
+            position: relative;
+            a {
+                display: flex;
+                img {
+                    height: 50px;
+                }
+            }
+        }      
+        .navi {
+            position: relative;
+            z-index: 3;           
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                li {
+                    display: inline-block;
+                    padding: 0px 15px; 
+                    a{
+                        display: flex;
+                        align-items: center;
+                        color: #fff;
+                        font-family: "Noto Serif TC", serif;
+                        font-size: 14.5px;
+                        font-weight: 600;
+                        text-align: center;
+                        padding: 37.15px 0;    
+                        span{                            
+                            &:nth-child(1){
+                                display: block;
+                            }
+                            &:nth-child(2){
+                                display: none;
+                            }
+                        }                      
+                        -webkit-font-smoothing: antialiased;
+                        
+                        
+                    }
+                    &.none-sub-menu{
+                        &.active {
+                            a{
+                                color: #8D7158;
+                                font-weight: 700;
+                            }                            
+                            span{
+                                &:nth-child(1){
+                                    display: none;
+                                }
+                                &:nth-child(2){
+                                    display: flex;
+                                }
+                            }
+                        }
+                    }
+                    &.had-sub-menu{
+                        i{
+                            display: inline-block;
+                            width: 10px;
+                            height: 10px;
+                            background-image: url(../images/icon_nav_arrow_white.svg);
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            margin-left: 5px;
+                        }
+                        .sub-menu{
+                           
+                            display: none;
+                            position: absolute;                            
+                            .sub-items{
+                                padding: 15.5px 0;
+                                display: flex;
+                                flex-wrap: wrap;
+                                div{
+                                    text-align: center;
+                                  
+                                    a{
+                                        display: inline-block;
+                                        font-size: 12px;  
+                                        font-weight: 500;                                     
+                                        padding: 5px 0px;
+                                        margin: 0 15px;
+                                        color: #133C2E;
+                                        border-bottom: 1px solid transparent;
+                                        &:hover{
+                                            color: #8D7158;
+                                            font-weight: 700;
+                                            border-bottom: 1px solid #8D7158;
+                                            span{
+                                                &:nth-child(1){
+                                                    display: none;
+                                                }
+                                                &:nth-child(2){
+                                                    display: flex;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            
+                           
+                        }
+                        &.active{
+                            .link{
+                                span{
+                                    &:nth-child(1){
+                                        display: none;
+                                    }
+                                    &:nth-child(2){
+                                        display: flex;
+                                    }
+                                }
+                            }                            
+                            a{
+                                color: #8D7158;
+                            }
+                            i{
+                               background-image: url(../images/icon_nav_arrow_golden.svg);                                
+                               transform: rotate(180deg);
+                            }
+                            .sub-menu{
+                                display: block;                               
+                               
+                            }
+                        }
+                        
+                    }
+                    &.contact{
+                        a{
+                            background: #8D7158;
+                            color: #fff;
+                            padding: 5px 20px;
+                            font-weight: 400;
+                            border-radius: 100px;
+                            transition: 1s ease;
+                            &:hover{
+                                background: #fff;
+                                color: #133C2E;                                
+                            }
+                        }
+                           
+                    }
+                }
+            }
+        }
+        &.active{
+            position: relative;
+            &:before{
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: -64px;
+                width: 100%;
+                background-color: #ADBDB6;
+                height: 64px;
+            }
+        }
+       
+    }
+}
+
+
+main {
+    position: relative;
+    z-index: 1;
+    padding-top: 96px;
+    h1{
+        display: none;
+    }
+}
+.main-home{
+    overflow: hidden;
+}
+.main-about-us{
+    overflow: hidden;
+}
+.main-expert-list{
+    padding-bottom: 100px;
+    .pagination-div{
+        padding-bottom: 0;
+    }
+}
+@media all and (max-width: 1920px) {
+   
+}
+
+@media all and (max-width: 1640px) {
+    
+}
+
+@media all and (max-width: 1440px) {}
+
+@media all and (max-width: 1330px) {   
+ 
+}
+
+@media all and (max-width: 1024px) {
+    main{
+        padding-top: 60px;
+    }
+    header{
+        .header-div{
+            padding: 10px 0;
+            .brand{
+                a{
+                    img{
+                        height: 40px;
+                    }
+                } 
+            } 
+            .navi{
+                li:not(.contact) {
+                    display: none;
+                }
+                li.contact{
+                    margin-right: 30px;
+                }
+            }
+        } 
+    } 
+}
+
+@media all and (max-width: 992px) {
+    
+}
+@media all and (max-width: 768px) {
+   
+}
+@media all and (max-width: 640px) {
+    
+}
