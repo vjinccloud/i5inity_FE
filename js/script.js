@@ -227,7 +227,11 @@ function setSider(){
 	}
 	if($('.swiperEnvironment').length>0){
 		var swiperEnvironment = new Swiper(".swiperEnvironment", {	
-			spaceBetween: 10,			
+			spaceBetween: 10,	
+			navigation: {
+				nextEl: ".swiperEnvironment .swiper-button-next",
+				prevEl: ".swiperEnvironment .swiper-button-prev",
+			},		
 			mousewheel: {
 				releaseOnEdges: true,
 			}, 

@@ -327,9 +327,23 @@
         justify-content: center;
         overflow: hidden;
         aspect-ratio: 1 / 1;
+        // Fallback
+        @supports not (aspect-ratio: 16 / 9) {
+            &::before {
+                float: left;
+                padding-top: 100%;
+                content: "";
+            }
+            &::after {
+                display: block;
+                content: "";
+                clear: both;
+            }
+        }
         img{
             /*width: 100%;*/
             transition: 0.5s ease;
+            height: 100%;
         }
     }
     .info{
@@ -556,6 +570,10 @@
         justify-content: center;
         .desc{
             display: inline-flex;
+            &.desc-bg{
+                background-color: rgba(255,255,255,0.5);
+                padding:0 10px 10px 10px;
+            }            
             h3{
                 color: #8D7158;
                 font-size: 13px;
@@ -822,10 +840,10 @@
                 }
                 .major{
                     h4{
-                        font-size: 14px;
+                        font-size: 16px;
                         font-weight: 700;
                         color: #133C2E;
-                        margin: 20px 0;
+                        margin: 20px 0 10px 0;
                     }
                     .chinese{
                         font-size: 15px;
@@ -840,7 +858,8 @@
                 .special{
                     margin-top: 20px;
                     h4{
-                        font-size: 14px;
+                        font-size: 16px;
+                        font-weight: 700;
                         color: #133C2E;
                         span{
                             font-size: 12px;
@@ -855,8 +874,10 @@
                 .experience{
                      margin-top: 20px;
                     h4{
-                        font-size: 14px;
+                        font-size: 16px;
+                        font-weight: 700;
                         color: #133C2E;
+                        margin-bottom: 10px;
                         span{
                             font-size: 12px;
                             display: inline-block;
@@ -865,7 +886,7 @@
                     }
                     ul{
                         font-size: 16px;
-                        color: #4A5565;
+                        color: #201C1D;
                     }
                 }
             }
@@ -955,12 +976,12 @@
                         display: block;
                     }
                     .name{
-                        font-size: 32px;
+                        font-size: 28px;
                         color: #201C1D;
                         b{
                             font-weight: 600;
-                            display: inline-block;
-                            margin-right: 10px;
+                            display: block;
+                            font-size: 32px;
                         }
                     }
                     .position{
@@ -995,7 +1016,7 @@
             }
             .special{               
                 h4{
-                    font-size: 14px;
+                    font-size: 16px;
                     font-weight: 700;
                     color: #133C2E;
                     span{
@@ -1011,18 +1032,17 @@
             .experience{
                     margin-top: 20px;
                 h4{
-                    font-size: 14px;
+                    font-size: 16px;
                     font-weight: 700;
                     color: #133C2E;
                     span{
-                        font-size: 12px;
-                        font-weight: 400;
+                        font-size: 12px;                       
                         display: inline-block;
                         margin-left: 10px;
                     }
                 }
                 ul{
-                    font-size: 16px;
+                    font-size: 14px;
                     color: #4A5565;
                     margin-top: 10px;
                 }
@@ -1069,6 +1089,30 @@
                         font-size: 14px;
                         color: #75777A;
                     }
+                }
+            }
+            .swiper-button-prev{
+                background-image: url(./../images/icon_swiper_big_left_gray.svg);
+                background-size: contain;
+                width: 48px;
+                height: 48px;
+                left: calc(50vw - 600px - 60px);
+                opacity: 0.5;
+                &:hover{
+                    background-image: url(./../images/icon_swiper_big_left_green.svg);
+                    opacity: 1;
+                }
+            }
+            .swiper-button-next{
+                background-image: url(./../images/icon_swiper_big_right_gray.svg);
+                background-size: contain;
+                width: 48px;
+                height: 48px;
+                left: calc(50vw + 600px );
+                opacity: 0.5;
+                &:hover{
+                    background-image: url(./../images/icon_swiper_big_right_green.svg);
+                    opacity: 1;
                 }
             }
         }
@@ -1189,6 +1233,33 @@
         }
         .swiper-slide{
             
+        }
+    }
+    .block-physician-column{
+        padding-bottom: 100px;
+        .more{
+            text-align: right;           
+            a{
+                font-size: 14px;
+                color: #8D7158;
+                display: inline-flex;
+                align-items: center;               
+                i{
+                    display: inline-block;
+                    width: 16px;
+                    height: 16px;
+                    background-image: url(./../images/icon_more_golden.svg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
+                &:hover{
+                    color: #133C2E;
+                    text-decoration: underline;
+                    i{
+                    background-image: url(./../images/icon_more_green.svg);  
+                    }
+                }
+            }
         }
     }
 }
@@ -1375,7 +1446,7 @@
                     flex-wrap: wrap;
                     justify-content: center;
                     padding: 50px 0 30px 0;
-                    min-height: calc(610px - 80px);
+                    min-height: calc(620px - 80px);
                     h3{
                         width: 40px;     
                         height: max-content;  
@@ -1415,11 +1486,15 @@
 .section-case-list{
     padding-bottom: 50px;
     .block-case-list{
-        .case-list-cate{
-            .cate-list{
-                padding: 50px 0;
+        .case-list-cate{           
+            .cate-list-outer{
+                margin: 50px auto;
+            }
+            .cate-list{                
                 display: flex;
-                justify-content: center;
+                justify-content: center; 
+                width: max-content;
+                margin: 0 auto;
                 a{
                     display: inline-flex;
                     align-items: center;
@@ -1429,7 +1504,7 @@
                     padding: 0 30px;
                     background-color: #F3F4F6;
                     color: #75777A;
-                    font-size: 16px;
+                    font-size: 14.5px;
                     margin: 0 5px;
                     &:hover,&.active{
                         background-color: #133C2E;
@@ -1668,6 +1743,31 @@
     .block-ostetrics-care-special{        
         .detail{
             margin-top: 50px;
+            h3{
+                font-size: 20px;
+                font-weight: 600;
+                text-align: center;
+                color: #75777A;
+            }
+            h4{
+                font-size: 18px;
+                font-weight: 600;
+                text-align: center;
+                color: #75777A;
+            }
+            h3 + h4{
+                margin-top: 20px;
+            }
+            h4 + p{
+                margin-top: 5px;
+            }
+            P + h4{
+                margin-top: 20px;
+            }
+            P + h3{
+                margin-top: 50px;
+            }
+            
             b{
                 font-weight: 700;
             }
@@ -1676,17 +1776,45 @@
             }
             .chinese{
                 text-align: center;
-                font-size: 16px;
+                font-size: 15px;
                 color: #75777A;
             }
-            .english{
-                margin-top: 20px;
+            .english{                
                 text-align: center;
-                font-size: 14px;
+                font-size: 15px;
                 color: #75777A;
             }
             .english + .chinese{
                 margin-top: 20px;
+            }
+            ul{
+                list-style: disc;
+                width: fit-content;
+                margin: 0 auto;  
+                font-size: 15px;
+                color: #75777A;   
+                padding-left: 25px;      
+            }
+            h4 + ul{
+                margin-top: 5px;
+            }
+        }
+        .more{
+            text-align: center;
+            padding: 30px 0 0 0;
+            a{
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-width: 120px;
+                min-height: 48px;
+                background-color: #8D7158;
+                font-size: 13px;
+                color: #fff;
+                border-radius: 100px;
+                &:hover{
+                    background-color: #133C2E;
+                }
             }
         }
     }
@@ -1725,14 +1853,49 @@
             
             .chinese{
                 text-align: center;
-                font-size: 16px;
+                font-size: 15px;
                 color: #75777A;
             }
             .english{
                 margin-top: 20px;
                 text-align: center;
-                font-size: 14px;
+                font-size: 15px;
                 color: #75777A;
+            }
+            h3{
+                font-size: 18px;
+                font-weight: 600;
+                text-align: center;
+                color: #75777A;
+            }
+            ul{
+                list-style: disc;
+                width: fit-content;
+                margin: 0 auto;  
+                font-size: 15px;
+                color: #75777A;    
+                padding-left: 25px     
+            }
+            h3 + ul{
+                margin-top: 5px;
+            }
+        }
+        .more{
+            text-align: center;
+            padding: 30px 0 0 0;
+            a{
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-width: 120px;
+                min-height: 48px;
+                background-color: #8D7158;
+                font-size: 13px;
+                color: #fff;
+                border-radius: 100px;
+                &:hover{
+                    background-color: #133C2E;
+                }
             }
         }
     }
@@ -1741,27 +1904,32 @@
     .block-health-data-info{
         .data-list-cate{
             margin: 50px 0;
+            .cate-list-outer{
+                overflow-x: auto;
+            }
             .cate-list{
                 text-align: center;  
                 display: flex;
                 align-items: center;
-                justify-content: center;              
+                justify-content: center;     
+                width: max-content;       
+                margin: 0 auto;  
                 a{
                     display: inline-flex;
                     align-items: center;
                     justify-content: center;
                     min-height: 36px;
                     border-radius: 100px;
-                    font-size: 16px;
+                    font-size: 14.5px;
                     color: #75777A;
                     padding: 0 15px;
                     background-color: #F3F4F6;
                     margin: 0 5px;
                     &.active,&:hover{
                         color: #fff;
-                        font-size: 24px;
+                        font-size: 14.5px;
                         background-color: #133C2E;
-                        min-height: 48px;
+                        min-height: 44px;
                     }
                 }
             }
@@ -1778,6 +1946,9 @@
         }
         .info{
             margin-top: 30px;
+            b{
+                font-weight: 700;
+            }
             .chinese{
                 font-size: 16px;
                 color: #75777A;
@@ -2165,16 +2336,14 @@
 
 
 @media all and (max-width: 1280px) {
+ 
     .section-health-data-vision{
         .block-health-data-vision{
-            .video{
-                iframe.video{
-                    height: 55vw;
-                }
-            } 
+            .video iframe,.video video{
+                height: 55vw;
+            }
         } 
     } 
-   
    
 }
 
@@ -2610,11 +2779,14 @@
     .section-case-list{
         .block-case-list{
             .case-list-cate{
-                .cate-list{
+                .cate-list-outer{
+                    overflow-x: auto;
+                }
+                .cate-list{  
                     a{
                         font-size: 14px;
                         padding: 0 10px;
-                        min-width: 50px;
+                        min-width: 50px;                       
                     }
                 } 
             } 
@@ -2650,6 +2822,21 @@
                     margin-top: 0;
                     width: calc(100% - 50px);
                     padding: 25px;
+                }
+            } 
+        } 
+    } 
+    .section-health-data-info{
+        .block-health-data-info{
+            .data-list-cate{
+                .cate-list-outer{
+                    margin-left: -15px;
+                    margin-right: -15px;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                }
+                .cate-list{
+                    
                 }
             } 
         } 

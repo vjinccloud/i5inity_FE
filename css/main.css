@@ -330,7 +330,7 @@ header .header-div .navi ul li.had-sub-menu .sub-menu .sub-items div {
 }
 header .header-div .navi ul li.had-sub-menu .sub-menu .sub-items div a {
   display: inline-block;
-  font-size: 12px;
+  font-size: 14.5px;
   font-weight: 500;
   padding: 5px 0px;
   margin: 0 15px;
@@ -417,6 +417,9 @@ main h1 {
   main {
     padding-top: 60px;
   }
+  header {
+    max-height: 60px;
+  }
   header .header-div {
     padding: 10px 0;
   }
@@ -440,6 +443,7 @@ main h1 {
   width: 24px;
   height: 24px;
   padding: 0;
+  border: none;
 }
 .toggle-btn span {
   display: block;
@@ -456,7 +460,7 @@ main h1 {
 
 .body-toggle-open .toggle-btn span:nth-child(1) {
   transform: rotate(45deg);
-  margin-bottom: -7px;
+  margin-bottom: -6px;
 }
 .body-toggle-open .toggle-btn span:nth-child(2) {
   transform: rotate(-45deg);
@@ -531,6 +535,9 @@ main h1 {
   padding: 15px 20px;
   margin: 0;
   -webkit-font-smoothing: antialiased;
+}
+#mobile-nav .navi ul li a:hover {
+  color: #8D7158;
 }
 #mobile-nav .navi ul li a span:nth-child(2) {
   display: none;
@@ -1817,9 +1824,22 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
   overflow: hidden;
   aspect-ratio: 1/1;
 }
+@supports not (aspect-ratio: 16/9) {
+  .column .img::before {
+    float: left;
+    padding-top: 100%;
+    content: "";
+  }
+  .column .img::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
 .column .img img {
   /*width: 100%;*/
   transition: 0.5s ease;
+  height: 100%;
 }
 .column .info {
   padding: 10px;
@@ -2040,6 +2060,10 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
 }
 .section-banner .info .desc {
   display: inline-flex;
+}
+.section-banner .info .desc.desc-bg {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 0 10px 10px 10px;
 }
 .section-banner .info .desc h3 {
   color: #8D7158;
@@ -2293,10 +2317,10 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
   margin-left: 20px;
 }
 .section-specialty-leader .block-specialty-leader .dr-big .info .major h4 {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
   color: #133C2E;
-  margin: 20px 0;
+  margin: 20px 0 10px 0;
 }
 .section-specialty-leader .block-specialty-leader .dr-big .info .major .chinese {
   font-size: 15px;
@@ -2311,7 +2335,8 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
   margin-top: 20px;
 }
 .section-specialty-leader .block-specialty-leader .dr-big .info .special h4 {
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 700;
   color: #133C2E;
 }
 .section-specialty-leader .block-specialty-leader .dr-big .info .special h4 span {
@@ -2326,8 +2351,10 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
   margin-top: 20px;
 }
 .section-specialty-leader .block-specialty-leader .dr-big .info .experience h4 {
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 700;
   color: #133C2E;
+  margin-bottom: 10px;
 }
 .section-specialty-leader .block-specialty-leader .dr-big .info .experience h4 span {
   font-size: 12px;
@@ -2336,7 +2363,7 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
 }
 .section-specialty-leader .block-specialty-leader .dr-big .info .experience ul {
   font-size: 16px;
-  color: #4A5565;
+  color: #201C1D;
 }
 .section-specialty-leader .block-specialty-leader .dr-big .more {
   margin-top: 20px;
@@ -2415,13 +2442,13 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
   display: block;
 }
 .section-expert-detail .block-expert-detail .dr-introduce .name-position-major h2 .name {
-  font-size: 32px;
+  font-size: 28px;
   color: #201C1D;
 }
 .section-expert-detail .block-expert-detail .dr-introduce .name-position-major h2 .name b {
   font-weight: 600;
-  display: inline-block;
-  margin-right: 10px;
+  display: block;
+  font-size: 32px;
 }
 .section-expert-detail .block-expert-detail .dr-introduce .name-position-major h2 .position {
   color: #133C2E;
@@ -2450,7 +2477,7 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
   margin-top: 10px;
 }
 .section-expert-detail .block-expert-detail .dr-introduce .special h4 {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
   color: #133C2E;
 }
@@ -2466,18 +2493,17 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
   margin-top: 20px;
 }
 .section-expert-detail .block-expert-detail .dr-introduce .experience h4 {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
   color: #133C2E;
 }
 .section-expert-detail .block-expert-detail .dr-introduce .experience h4 span {
   font-size: 12px;
-  font-weight: 400;
   display: inline-block;
   margin-left: 10px;
 }
 .section-expert-detail .block-expert-detail .dr-introduce .experience ul {
-  font-size: 16px;
+  font-size: 14px;
   color: #4A5565;
   margin-top: 10px;
 }
@@ -2517,6 +2543,30 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
 .section-environment-introduction .block-environment-swiper .swiperEnvironment .swiper-slide .desc h3 {
   font-size: 14px;
   color: #75777A;
+}
+.section-environment-introduction .block-environment-swiper .swiperEnvironment .swiper-button-prev {
+  background-image: url(./../images/icon_swiper_big_left_gray.svg);
+  background-size: contain;
+  width: 48px;
+  height: 48px;
+  left: calc(50vw - 600px - 60px);
+  opacity: 0.5;
+}
+.section-environment-introduction .block-environment-swiper .swiperEnvironment .swiper-button-prev:hover {
+  background-image: url(./../images/icon_swiper_big_left_green.svg);
+  opacity: 1;
+}
+.section-environment-introduction .block-environment-swiper .swiperEnvironment .swiper-button-next {
+  background-image: url(./../images/icon_swiper_big_right_gray.svg);
+  background-size: contain;
+  width: 48px;
+  height: 48px;
+  left: calc(50vw + 600px);
+  opacity: 0.5;
+}
+.section-environment-introduction .block-environment-swiper .swiperEnvironment .swiper-button-next:hover {
+  background-image: url(./../images/icon_swiper_big_right_green.svg);
+  opacity: 1;
 }
 
 .section-address .block-environment-introduction .map {
@@ -2621,6 +2671,34 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
 .section-physician-column .column-swiper .swiper-wrapper {
   padding-bottom: 40px;
 }
+.section-physician-column .block-physician-column {
+  padding-bottom: 100px;
+}
+.section-physician-column .block-physician-column .more {
+  text-align: right;
+}
+.section-physician-column .block-physician-column .more a {
+  font-size: 14px;
+  color: #8D7158;
+  display: inline-flex;
+  align-items: center;
+}
+.section-physician-column .block-physician-column .more a i {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url(./../images/icon_more_golden.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.section-physician-column .block-physician-column .more a:hover {
+  color: #133C2E;
+  text-decoration: underline;
+}
+.section-physician-column .block-physician-column .more a:hover i {
+  background-image: url(./../images/icon_more_green.svg);
+}
+
 .section-outpatient-hours {
   margin: 100px 0;
 }
@@ -2792,7 +2870,7 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
   flex-wrap: wrap;
   justify-content: center;
   padding: 50px 0 30px 0;
-  min-height: 530px;
+  min-height: 540px;
 }
 .section-servcies-overview .block-servcies-overview .overview-list .item .info h3 {
   width: 40px;
@@ -2827,10 +2905,15 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
 .section-case-list {
   padding-bottom: 50px;
 }
+.section-case-list .block-case-list .case-list-cate .cate-list-outer {
+  margin: 50px auto;
+}
 .section-case-list .block-case-list .case-list-cate .cate-list {
-  padding: 50px 0;
   display: flex;
   justify-content: center;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
 }
 .section-case-list .block-case-list .case-list-cate .cate-list a {
   display: inline-flex;
@@ -2841,7 +2924,7 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
   padding: 0 30px;
   background-color: #F3F4F6;
   color: #75777A;
-  font-size: 16px;
+  font-size: 14.5px;
   margin: 0 5px;
 }
 .section-case-list .block-case-list .case-list-cate .cate-list a:hover, .section-case-list .block-case-list .case-list-cate .cate-list a.active {
@@ -3070,6 +3153,30 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
 .section-ostetrics-care-special .block-ostetrics-care-special .detail {
   margin-top: 50px;
 }
+.section-ostetrics-care-special .block-ostetrics-care-special .detail h3 {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  color: #75777A;
+}
+.section-ostetrics-care-special .block-ostetrics-care-special .detail h4 {
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  color: #75777A;
+}
+.section-ostetrics-care-special .block-ostetrics-care-special .detail h3 + h4 {
+  margin-top: 20px;
+}
+.section-ostetrics-care-special .block-ostetrics-care-special .detail h4 + p {
+  margin-top: 5px;
+}
+.section-ostetrics-care-special .block-ostetrics-care-special .detail P + h4 {
+  margin-top: 20px;
+}
+.section-ostetrics-care-special .block-ostetrics-care-special .detail P + h3 {
+  margin-top: 50px;
+}
 .section-ostetrics-care-special .block-ostetrics-care-special .detail b {
   font-weight: 700;
 }
@@ -3078,17 +3185,46 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
 }
 .section-ostetrics-care-special .block-ostetrics-care-special .detail .chinese {
   text-align: center;
-  font-size: 16px;
+  font-size: 15px;
   color: #75777A;
 }
 .section-ostetrics-care-special .block-ostetrics-care-special .detail .english {
-  margin-top: 20px;
   text-align: center;
-  font-size: 14px;
+  font-size: 15px;
   color: #75777A;
 }
 .section-ostetrics-care-special .block-ostetrics-care-special .detail .english + .chinese {
   margin-top: 20px;
+}
+.section-ostetrics-care-special .block-ostetrics-care-special .detail ul {
+  list-style: disc;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  font-size: 15px;
+  color: #75777A;
+  padding-left: 25px;
+}
+.section-ostetrics-care-special .block-ostetrics-care-special .detail h4 + ul {
+  margin-top: 5px;
+}
+.section-ostetrics-care-special .block-ostetrics-care-special .more {
+  text-align: center;
+  padding: 30px 0 0 0;
+}
+.section-ostetrics-care-special .block-ostetrics-care-special .more a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  min-height: 48px;
+  background-color: #8D7158;
+  font-size: 13px;
+  color: #fff;
+  border-radius: 100px;
+}
+.section-ostetrics-care-special .block-ostetrics-care-special .more a:hover {
+  background-color: #133C2E;
 }
 
 .section-ostetrics-care-swiper {
@@ -3118,24 +3254,66 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
 }
 .section-ostetrics-gentle-reminders .block-ostetrics-gentle-reminders .detail .chinese {
   text-align: center;
-  font-size: 16px;
+  font-size: 15px;
   color: #75777A;
 }
 .section-ostetrics-gentle-reminders .block-ostetrics-gentle-reminders .detail .english {
   margin-top: 20px;
   text-align: center;
-  font-size: 14px;
+  font-size: 15px;
   color: #75777A;
+}
+.section-ostetrics-gentle-reminders .block-ostetrics-gentle-reminders .detail h3 {
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  color: #75777A;
+}
+.section-ostetrics-gentle-reminders .block-ostetrics-gentle-reminders .detail ul {
+  list-style: disc;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  font-size: 15px;
+  color: #75777A;
+  padding-left: 25px;
+}
+.section-ostetrics-gentle-reminders .block-ostetrics-gentle-reminders .detail h3 + ul {
+  margin-top: 5px;
+}
+.section-ostetrics-gentle-reminders .block-ostetrics-gentle-reminders .more {
+  text-align: center;
+  padding: 30px 0 0 0;
+}
+.section-ostetrics-gentle-reminders .block-ostetrics-gentle-reminders .more a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  min-height: 48px;
+  background-color: #8D7158;
+  font-size: 13px;
+  color: #fff;
+  border-radius: 100px;
+}
+.section-ostetrics-gentle-reminders .block-ostetrics-gentle-reminders .more a:hover {
+  background-color: #133C2E;
 }
 
 .section-health-data-info .block-health-data-info .data-list-cate {
   margin: 50px 0;
+}
+.section-health-data-info .block-health-data-info .data-list-cate .cate-list-outer {
+  overflow-x: auto;
 }
 .section-health-data-info .block-health-data-info .data-list-cate .cate-list {
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
 }
 .section-health-data-info .block-health-data-info .data-list-cate .cate-list a {
   display: inline-flex;
@@ -3143,7 +3321,7 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
   justify-content: center;
   min-height: 36px;
   border-radius: 100px;
-  font-size: 16px;
+  font-size: 14.5px;
   color: #75777A;
   padding: 0 15px;
   background-color: #F3F4F6;
@@ -3151,9 +3329,9 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
 }
 .section-health-data-info .block-health-data-info .data-list-cate .cate-list a.active, .section-health-data-info .block-health-data-info .data-list-cate .cate-list a:hover {
   color: #fff;
-  font-size: 24px;
+  font-size: 14.5px;
   background-color: #133C2E;
-  min-height: 48px;
+  min-height: 44px;
 }
 .section-health-data-info .block-health-data-info .caption {
   text-align: left;
@@ -3164,6 +3342,9 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
 }
 .section-health-data-info .block-health-data-info .info {
   margin-top: 30px;
+}
+.section-health-data-info .block-health-data-info .info b {
+  font-weight: 700;
 }
 .section-health-data-info .block-health-data-info .info .chinese {
   font-size: 16px;
@@ -3461,7 +3642,7 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
   }
 }
 @media all and (max-width: 1280px) {
-  .section-health-data-vision .block-health-data-vision .video iframe.video {
+  .section-health-data-vision .block-health-data-vision .video iframe, .section-health-data-vision .block-health-data-vision .video video {
     height: 55vw;
   }
 }
@@ -3738,6 +3919,9 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
   .section-case-detail .block-case-detail .case-detail .detail {
     font-size: medium;
   }
+  .section-case-list .block-case-list .case-list-cate .cate-list-outer {
+    overflow-x: auto;
+  }
   .section-case-list .block-case-list .case-list-cate .cate-list a {
     font-size: 14px;
     padding: 0 10px;
@@ -3772,6 +3956,12 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
     margin-top: 0;
     width: calc(100% - 50px);
     padding: 25px;
+  }
+  .section-health-data-info .block-health-data-info .data-list-cate .cate-list-outer {
+    margin-left: -15px;
+    margin-right: -15px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
   .section-specialty-leader .block-specialty-leader .dr-list .item {
     padding: 10px;
