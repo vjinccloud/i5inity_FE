@@ -349,7 +349,7 @@
     .info{
         padding: 10px;
         h3{
-            font-size: 20px;
+            font-size: 16px;
             line-height: 1.5;
             color: #75777A;
             overflow: hidden;
@@ -360,7 +360,7 @@
         }
         h4{
             color: #133C2E;
-            font-size: 14px;
+            font-size: 12px;
             font-family: "Marcellus", serif;
         }
     }
@@ -885,7 +885,7 @@
                         }
                     }
                     ul{
-                        font-size: 16px;
+                        font-size: 14px;
                         color: #201C1D;
                     }
                 }
@@ -1122,12 +1122,12 @@
     .block-environment-introduction{        
         .map{
             margin-top: 50px;
-            width: 900px;
+            width: 600px;
             margin-left: auto;
             margin-right: auto;
             iframe{
                 width: 100%;
-                height: 560px;
+                height: 338px;
                 filter: grayscale(1);
             }
             &:hover{
@@ -1228,6 +1228,9 @@
     
     .column-swiper{
         margin-top: 50px;
+        width: 1060px;
+        margin-left: auto;
+        margin-right: auto;
         .swiper-wrapper{
             padding-bottom: 40px;
         }
@@ -1333,7 +1336,7 @@
 }
 .section-servcies-info{
     .block-servcies-info{
-        margin-top: 150px;
+        margin-top: 50px;
         .info{
             text-align: center;
             line-height: 1.8;
@@ -1424,6 +1427,9 @@
             display: flex;
             flex-wrap: wrap;
             margin-top: 50px;
+            width: 830px;
+            margin-left: auto;
+            margin-right: auto;
             .item{
                 margin: 10px;
                 width: calc(100% / 5 - 20px);
@@ -1445,12 +1451,12 @@
                     display: flex;
                     flex-wrap: wrap;
                     justify-content: center;
-                    padding: 50px 0 30px 0;
-                    min-height: calc(620px - 80px);
+                    padding: 30px 0 30px 0;
+                    min-height: calc(495px - 60px);
                     h3{
                         width: 40px;     
                         height: max-content;  
-                        font-size: 24px;
+                        font-size: 16px;
                         font-weight: 600;
                         color: #133C2E;
                         -ms-writing-mode: vertical-rl;
@@ -1462,7 +1468,7 @@
                     h4{
                         width: 26px;
                         height: max-content;
-                        font-size: 16px;
+                        font-size: 12px;
                         color: #75777A;
                         -ms-writing-mode: vertical-rl;
                         -webkit-writing-mode: vertical-rl;
@@ -1515,8 +1521,9 @@
             .case-list{
                 display: flex;
                 flex-wrap: wrap;
-                margin-left: -10px;
-                margin-right: -10px;
+                margin-left: auto;
+                margin-right: auto;
+                width: 1060px;
                 .item{
                     width: calc(100% / 4 - 20px);
                     margin: 10px;
@@ -1697,7 +1704,7 @@
     margin-top: 50px;    
     .block-ostetrics-care-treatment{
         .detail{
-            margin-top: 50px;
+            margin-top: 25px;
             img{
                 width: 100%;
             }
@@ -1742,7 +1749,7 @@
     margin-top: 50px;
     .block-ostetrics-care-special{        
         .detail{
-            margin-top: 50px;
+            margin-top: 25px;
             h3{
                 font-size: 20px;
                 font-weight: 600;
@@ -1767,7 +1774,9 @@
             P + h3{
                 margin-top: 50px;
             }
-            
+            P + P{
+                margin-top: 20px;
+            }
             b{
                 font-weight: 700;
             }
@@ -1827,11 +1836,12 @@
             .swiper-wrapper{
                 padding-bottom: 50px;
                 .swiper-slide{
+                    img{
+                        width: 100%;
+                    }
                     a{
                         display: flex;
-                        img{
-                            width: 100%;
-                        }
+                        
                         &:hover{
                             opacity: 0.5;
                         }
@@ -1846,7 +1856,7 @@
     margin: 50px 0 100px 0;
     .block-ostetrics-gentle-reminders{       
         .detail{
-            margin-top: 50px;
+            margin-top: 25px;
             b{
                 font-weight: 700;
             }
@@ -1863,7 +1873,7 @@
                 color: #75777A;
             }
             h3{
-                font-size: 18px;
+                font-size: 20px;
                 font-weight: 600;
                 text-align: center;
                 color: #75777A;
@@ -2347,6 +2357,26 @@
    
 }
 
+@media all and (max-width: 1090px) {
+    .section-physician-column{
+        .column-swiper{
+            width: 100%;
+            margin-left: -10px;
+            margin-right: -10px;
+        }
+    } 
+    .section-case-list{
+        .block-case-list{
+            .case-list-cate{
+                .case-list{
+                    width: 100%;
+                    margin-left: -10px;
+                    margin-right: -10px; 
+                }
+            } 
+        } 
+    } 
+}
 
 @media all and (max-width: 1024px) {
     .section-swiper{
@@ -2576,6 +2606,8 @@
         .block-servcies-overview{
             .overview-list-outer{
                 overflow-x: auto;
+                margin-left: -10px;
+                margin-right: -10px;
                 .overview-list{
                     width: 767px;
                     .item{

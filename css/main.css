@@ -1009,7 +1009,7 @@ footer .section-footer-bottom .brand-links-copyright .links a:hover {
   text-decoration: underline;
 }
 footer .section-footer-bottom .brand-links-copyright .copyright {
-  font-size: 14px;
+  font-size: 12px;
   color: #fff;
   text-align: right;
 }
@@ -1845,7 +1845,7 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
   padding: 10px;
 }
 .column .info h3 {
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1.5;
   color: #75777A;
   overflow: hidden;
@@ -1856,7 +1856,7 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
 }
 .column .info h4 {
   color: #133C2E;
-  font-size: 14px;
+  font-size: 12px;
   font-family: "Marcellus", serif;
 }
 .column:hover .img img {
@@ -2362,7 +2362,7 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
   margin-left: 10px;
 }
 .section-specialty-leader .block-specialty-leader .dr-big .info .experience ul {
-  font-size: 16px;
+  font-size: 14px;
   color: #201C1D;
 }
 .section-specialty-leader .block-specialty-leader .dr-big .more {
@@ -2571,13 +2571,13 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
 
 .section-address .block-environment-introduction .map {
   margin-top: 50px;
-  width: 900px;
+  width: 600px;
   margin-left: auto;
   margin-right: auto;
 }
 .section-address .block-environment-introduction .map iframe {
   width: 100%;
-  height: 560px;
+  height: 338px;
   filter: grayscale(1);
 }
 .section-address .block-environment-introduction .map:hover iframe {
@@ -2667,6 +2667,9 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
 }
 .section-physician-column .column-swiper {
   margin-top: 50px;
+  width: 1060px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .section-physician-column .column-swiper .swiper-wrapper {
   padding-bottom: 40px;
@@ -2759,7 +2762,7 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
 }
 
 .section-servcies-info .block-servcies-info {
-  margin-top: 150px;
+  margin-top: 50px;
 }
 .section-servcies-info .block-servcies-info .info {
   text-align: center;
@@ -2850,6 +2853,9 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
   display: flex;
   flex-wrap: wrap;
   margin-top: 50px;
+  width: 830px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .section-servcies-overview .block-servcies-overview .overview-list .item {
   margin: 10px;
@@ -2869,14 +2875,14 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 50px 0 30px 0;
-  min-height: 540px;
+  padding: 30px 0 30px 0;
+  min-height: 435px;
 }
 .section-servcies-overview .block-servcies-overview .overview-list .item .info h3 {
   width: 40px;
   height: -moz-max-content;
   height: max-content;
-  font-size: 24px;
+  font-size: 16px;
   font-weight: 600;
   color: #133C2E;
   -moz-writing-mode: vertical-rl;
@@ -2887,7 +2893,7 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
   width: 26px;
   height: -moz-max-content;
   height: max-content;
-  font-size: 16px;
+  font-size: 12px;
   color: #75777A;
   -moz-writing-mode: vertical-rl;
   writing-mode: vertical-rl;
@@ -2934,8 +2940,9 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
 .section-case-list .block-case-list .case-list-cate .case-list {
   display: flex;
   flex-wrap: wrap;
-  margin-left: -10px;
-  margin-right: -10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1060px;
 }
 .section-case-list .block-case-list .case-list-cate .case-list .item {
   width: calc(25% - 20px);
@@ -3108,7 +3115,7 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
   margin-top: 50px;
 }
 .section-ostetrics-care-treatment .block-ostetrics-care-treatment .detail {
-  margin-top: 50px;
+  margin-top: 25px;
 }
 .section-ostetrics-care-treatment .block-ostetrics-care-treatment .detail img {
   width: 100%;
@@ -3151,7 +3158,7 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
   margin-top: 50px;
 }
 .section-ostetrics-care-special .block-ostetrics-care-special .detail {
-  margin-top: 50px;
+  margin-top: 25px;
 }
 .section-ostetrics-care-special .block-ostetrics-care-special .detail h3 {
   font-size: 20px;
@@ -3176,6 +3183,9 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
 }
 .section-ostetrics-care-special .block-ostetrics-care-special .detail P + h3 {
   margin-top: 50px;
+}
+.section-ostetrics-care-special .block-ostetrics-care-special .detail P + P {
+  margin-top: 20px;
 }
 .section-ostetrics-care-special .block-ostetrics-care-special .detail b {
   font-weight: 700;
@@ -3233,11 +3243,11 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
 .section-ostetrics-care-swiper .block-ostetrics-care-swiper .swiperCare .swiper-wrapper {
   padding-bottom: 50px;
 }
+.section-ostetrics-care-swiper .block-ostetrics-care-swiper .swiperCare .swiper-wrapper .swiper-slide img {
+  width: 100%;
+}
 .section-ostetrics-care-swiper .block-ostetrics-care-swiper .swiperCare .swiper-wrapper .swiper-slide a {
   display: flex;
-}
-.section-ostetrics-care-swiper .block-ostetrics-care-swiper .swiperCare .swiper-wrapper .swiper-slide a img {
-  width: 100%;
 }
 .section-ostetrics-care-swiper .block-ostetrics-care-swiper .swiperCare .swiper-wrapper .swiper-slide a:hover {
   opacity: 0.5;
@@ -3247,7 +3257,7 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
   margin: 50px 0 100px 0;
 }
 .section-ostetrics-gentle-reminders .block-ostetrics-gentle-reminders .detail {
-  margin-top: 50px;
+  margin-top: 25px;
 }
 .section-ostetrics-gentle-reminders .block-ostetrics-gentle-reminders .detail b {
   font-weight: 700;
@@ -3264,7 +3274,7 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
   color: #75777A;
 }
 .section-ostetrics-gentle-reminders .block-ostetrics-gentle-reminders .detail h3 {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
   text-align: center;
   color: #75777A;
@@ -3646,6 +3656,18 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
     height: 55vw;
   }
 }
+@media all and (max-width: 1090px) {
+  .section-physician-column .column-swiper {
+    width: 100%;
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  .section-case-list .block-case-list .case-list-cate .case-list {
+    width: 100%;
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+}
 @media all and (max-width: 1024px) {
   .section-swiper {
     margin-top: 20px;
@@ -3766,6 +3788,8 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
   }
   .section-servcies-overview .block-servcies-overview .overview-list-outer {
     overflow-x: auto;
+    margin-left: -10px;
+    margin-right: -10px;
   }
   .section-servcies-overview .block-servcies-overview .overview-list-outer .overview-list {
     width: 767px;

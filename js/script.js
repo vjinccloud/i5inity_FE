@@ -147,16 +147,19 @@ function setSider(){
 			slidesPerView: 4,
 			breakpoints: {
 				350: {
-				slidesPerView: 1,				
-				},
-				640: {
-				slidesPerView: 1,				
-				},
-				768: {
 				slidesPerView: 2,				
 				},
-				1024: {
+				640: {
+				slidesPerView: 2,				
+				},
+				768: {
 				slidesPerView: 3,				
+				},
+				992: {
+				slidesPerView: 3,				
+				},
+				1090: {
+				slidesPerView: 4,				
 				},
 				1366: {
 				slidesPerView: 4,				
