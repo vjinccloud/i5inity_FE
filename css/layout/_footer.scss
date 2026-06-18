@@ -154,6 +154,19 @@
 
                             }
                         }
+                        &.integrative-submenu{
+                            .sub-menu{
+                                .sub-items{
+                                    background-color: #ADBDB6;
+                                    a{
+                                        color: #133C2E;
+                                        &:hover{
+                                            color: #8D7158;
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                     &.support{                        
                         background: linear-gradient(90deg, #FF7373 0%, #F8C1C7 100%);
@@ -794,9 +807,10 @@ footer{
             padding: 50px 0;
             .mobile-brand{
                 display: block;
+                text-align: center;
             }
             .societys{
-                text-align: left;
+                text-align: center;
                 margin-top: 20px;
                 margin-right: 0;
                 margin-left: -5px;
@@ -813,18 +827,23 @@ footer{
                     }
                 }
                 .links{
-                    text-align: left;
+                    text-align: center;
                     margin-left: -10px;
                     margin-right: -10px;
                     margin-top: 10px;
                     margin-bottom: 10px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
                     a{
                         font-size: 14px;
-                        margin: 0 10px;
+                        margin: 5px 10px;
+                        display: inline-block;
+                        width: calc(100% / 4 - 20px);
                     }
                 }
                 .copyright{
-                    text-align: left;
+                    text-align: center;
                     font-size: 8px;
                     margin-top: 10px;
                 }
@@ -833,13 +852,25 @@ footer{
     } 
 }
 @media all and (max-width: 640px) {   
-    footer{
+    footer{        
         .section-footer-top{
             .block-footer-top{
                 .title-link-info-outer{ 
                     border-radius: 150px 0 0 0;
                     padding:100px 0 50px 0;                   
                 }
+                .title-link-info{
+                    .link{
+                        a{
+                            font-size: 14.5px;
+                            display: inline-flex;
+                            align-items: center;
+                            justify-content: center;
+                            min-width: 102px;
+                            min-height: 34px;
+                        }
+                    } 
+                } 
             }
         }
         .section-footer-bottom{
@@ -855,6 +886,9 @@ footer{
             } 
         } 
     }
+    .main-about-us + footer .section-footer-top .block-footer-top{
+        background-color: #F3F2F2;
+    }       
     .popup-contact{
         .popup-box{
             width: 85%;

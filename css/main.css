@@ -367,10 +367,15 @@ header .header-div .navi ul li.had-sub-menu.active .sub-menu {
 header .header-div .navi ul li.contact a {
   background: #8D7158;
   color: #fff;
-  padding: 5px 20px;
+  padding: 0;
   font-weight: 400;
   border-radius: 100px;
   transition: 1s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 102px;
+  min-height: 34px;
 }
 header .header-div .navi ul li.contact a:hover {
   background: #fff;
@@ -571,6 +576,15 @@ main h1 {
 }
 #mobile-nav .navi ul li.had-sub-menu.active .sub-menu {
   display: block;
+}
+#mobile-nav .navi ul li.had-sub-menu.integrative-submenu .sub-menu .sub-items {
+  background-color: #ADBDB6;
+}
+#mobile-nav .navi ul li.had-sub-menu.integrative-submenu .sub-menu .sub-items a {
+  color: #133C2E;
+}
+#mobile-nav .navi ul li.had-sub-menu.integrative-submenu .sub-menu .sub-items a:hover {
+  color: #8D7158;
 }
 #mobile-nav .navi ul li.support {
   background: linear-gradient(90deg, #FF7373 0%, #F8C1C7 100%);
@@ -1119,9 +1133,10 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
   }
   footer .section-footer-bottom .mobile-brand {
     display: block;
+    text-align: center;
   }
   footer .section-footer-bottom .societys {
-    text-align: left;
+    text-align: center;
     margin-top: 20px;
     margin-right: 0;
     margin-left: -5px;
@@ -1136,18 +1151,23 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
     display: none;
   }
   footer .section-footer-bottom .brand-links-copyright .links {
-    text-align: left;
+    text-align: center;
     margin-left: -10px;
     margin-right: -10px;
     margin-top: 10px;
     margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   footer .section-footer-bottom .brand-links-copyright .links a {
     font-size: 14px;
-    margin: 0 10px;
+    margin: 5px 10px;
+    display: inline-block;
+    width: calc(25% - 20px);
   }
   footer .section-footer-bottom .brand-links-copyright .copyright {
-    text-align: left;
+    text-align: center;
     font-size: 8px;
     margin-top: 10px;
   }
@@ -1157,6 +1177,14 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
     border-radius: 150px 0 0 0;
     padding: 100px 0 50px 0;
   }
+  footer .section-footer-top .block-footer-top .title-link-info .link a {
+    font-size: 14.5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 102px;
+    min-height: 34px;
+  }
   footer .section-footer-bottom .brand-links-copyright .links {
     display: flex;
     flex-wrap: wrap;
@@ -1164,6 +1192,9 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
   footer .section-footer-bottom .brand-links-copyright .links a {
     width: calc(25% - 20px);
     margin: 5px 10px;
+  }
+  .main-about-us + footer .section-footer-top .block-footer-top {
+    background-color: #F3F2F2;
   }
   .popup-contact .popup-box {
     width: 85%;
@@ -1695,6 +1726,9 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
 .swiperHome .swiper-slide .img img {
   width: 100%;
 }
+.swiperHome .swiper-slide .img img.mobile {
+  display: none;
+}
 
 .swiper-button-prev {
   width: 50px;
@@ -1884,9 +1918,13 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
 }
 .section-swiper .swiper-button-prev {
   left: -50px;
+  width: 40px;
+  height: 40px;
 }
 .section-swiper .swiper-button-next {
   right: -50px;
+  width: 40px;
+  height: 40px;
 }
 .section-swiper .block-info {
   padding: 100px 0;
@@ -2002,9 +2040,17 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
   font-size: 16px;
   color: #75777A;
 }
+.section-about-us .block-about-us .about-us-info .chinese .mobile {
+  display: none;
+  text-align: left;
+}
 .section-about-us .block-about-us .about-us-info .english {
   font-size: 14px;
   color: #75777A;
+}
+.section-about-us .block-about-us .about-us-info .english .mobile {
+  display: none;
+  text-align: left;
 }
 .section-about-us .block-about-us .about-us-info .chinese + .english {
   margin-top: 30px;
@@ -2049,6 +2095,9 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
 }
 .section-banner .img img {
   width: 100%;
+}
+.section-banner .img img.mobile {
+  display: none;
 }
 .section-banner .info {
   position: absolute;
@@ -2163,6 +2212,9 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
 }
 .section-vision .banner img {
   width: 100%;
+}
+.section-vision .banner img.mobile {
+  display: none;
 }
 .section-vision .vision-list .item {
   margin: 50px 0;
@@ -2420,6 +2472,30 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
 .section-specialty-leader .block-specialty-leader .caption a i {
   margin-bottom: 2px;
 }
+.section-specialty-leader .block-specialty-leader .dr-more {
+  text-align: right;
+}
+.section-specialty-leader .block-specialty-leader .dr-more a {
+  font-size: 14px;
+  color: #8D7158;
+  display: inline-flex;
+  align-items: center;
+}
+.section-specialty-leader .block-specialty-leader .dr-more a i {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url(./../images/icon_more_golden.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.section-specialty-leader .block-specialty-leader .dr-more a:hover {
+  color: #133C2E;
+  text-decoration: underline;
+}
+.section-specialty-leader .block-specialty-leader .dr-more a:hover i {
+  background-image: url(./../images/icon_more_green.svg);
+}
 
 .section-expert-detail .block-expert-detail .dr-introduce {
   margin-top: 50px;
@@ -2437,6 +2513,10 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
 .section-expert-detail .block-expert-detail .dr-introduce .three-cols .col03 {
   width: calc(44% - 50px);
   padding-left: 50px;
+}
+.section-expert-detail .block-expert-detail .dr-introduce .name-position-major.name-position-major-mobile {
+  display: none;
+  margin-bottom: 20px;
 }
 .section-expert-detail .block-expert-detail .dr-introduce .name-position-major h2 span {
   display: block;
@@ -2674,6 +2754,16 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
 .section-physician-column .column-swiper .swiper-wrapper {
   padding-bottom: 40px;
 }
+.section-physician-column .column-list-mobile {
+  display: none;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.section-physician-column .column-list-mobile .item {
+  width: 100%;
+  margin: 10px 0;
+}
 .section-physician-column .block-physician-column {
   padding-bottom: 100px;
 }
@@ -2704,6 +2794,7 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
 
 .section-outpatient-hours {
   margin: 100px 0;
+  overflow: hidden;
 }
 .section-outpatient-hours .outpatient-hours .two-cols {
   display: flex;
@@ -2781,7 +2872,11 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
 .section-servcies-info .block-servcies-info .info .english {
   font-size: 14px;
   color: #75777A;
-  margin-top: 20px;
+  margin-top: 30px;
+}
+.section-servcies-info .block-servcies-info .info .mobile {
+  display: none;
+  text-align: left;
 }
 
 .section-servcies-overview .block-servcies-overview {
@@ -2852,6 +2947,7 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
 .section-servcies-overview .block-servcies-overview .overview-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   margin-top: 50px;
   width: 830px;
   margin-left: auto;
@@ -2888,6 +2984,10 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
   -moz-writing-mode: vertical-rl;
   writing-mode: vertical-rl;
   letter-spacing: 6px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .section-servcies-overview .block-servcies-overview .overview-list .item .info h4 {
   width: 26px;
@@ -2898,6 +2998,10 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
   -moz-writing-mode: vertical-rl;
   writing-mode: vertical-rl;
   letter-spacing: 6px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .section-servcies-overview .block-servcies-overview .overview-list .item .img {
   display: flex;
@@ -2906,6 +3010,75 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
 .section-servcies-overview .block-servcies-overview .overview-list .item .img img {
   width: 100%;
   transition: 0.5s ease;
+}
+.section-servcies-overview .block-servcies-overview .swiper-overview-outer {
+  display: none;
+  padding: 0 50px;
+  margin-top: 40px;
+}
+.section-servcies-overview .block-servcies-overview .swiper-overview-outer .swiperOverview .item {
+  width: 100%;
+  background-color: #F8F8F8;
+}
+.section-servcies-overview .block-servcies-overview .swiper-overview-outer .swiperOverview .item a {
+  display: block;
+}
+.section-servcies-overview .block-servcies-overview .swiper-overview-outer .swiperOverview .item a:hover .info {
+  background-color: #C9D2CD;
+}
+.section-servcies-overview .block-servcies-overview .swiper-overview-outer .swiperOverview .item a:hover .img img {
+  transform: scale(1.15);
+}
+.section-servcies-overview .block-servcies-overview .swiper-overview-outer .swiperOverview .item .info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 30px 0 20px 0;
+  min-height: 220px;
+}
+.section-servcies-overview .block-servcies-overview .swiper-overview-outer .swiperOverview .item .info h3 {
+  width: 40px;
+  height: -moz-max-content;
+  height: max-content;
+  font-size: 16px;
+  font-weight: 600;
+  color: #133C2E;
+  -moz-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
+  letter-spacing: 6px;
+  line-height: 1.4;
+  margin-right: 20px;
+}
+.section-servcies-overview .block-servcies-overview .swiper-overview-outer .swiperOverview .item .info h4 {
+  width: 26px;
+  height: -moz-max-content;
+  height: max-content;
+  font-size: 12px;
+  color: #75777A;
+  -moz-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
+  letter-spacing: 6px;
+  line-height: 1.4;
+}
+.section-servcies-overview .block-servcies-overview .swiper-overview-outer .swiperOverview .item .img {
+  display: flex;
+  overflow: hidden;
+}
+.section-servcies-overview .block-servcies-overview .swiper-overview-outer .swiperOverview .item .img img {
+  width: 100%;
+  transition: 0.5s ease;
+}
+.section-servcies-overview .block-servcies-overview .swiper-overview-outer .swiper-button-next {
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  right: 15px;
+}
+.section-servcies-overview .block-servcies-overview .swiper-overview-outer .swiper-button-prev {
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  left: 15px;
 }
 
 .section-case-list {
@@ -3129,6 +3302,9 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
   text-align: center;
   margin-bottom: 30px;
 }
+.section-ostetrics-care-treatment .block-ostetrics-care-treatment .detail .chinese.chinese-mobile {
+  display: none;
+}
 .section-ostetrics-care-treatment .block-ostetrics-care-treatment .detail .english {
   margin-top: 30px;
   font-size: 14px;
@@ -3143,8 +3319,8 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 120px;
-  min-height: 48px;
+  min-width: 102px;
+  min-height: 34px;
   background-color: #8D7158;
   font-size: 13px;
   color: #fff;
@@ -3178,6 +3354,9 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
 .section-ostetrics-care-special .block-ostetrics-care-special .detail h4 + p {
   margin-top: 5px;
 }
+.section-ostetrics-care-special .block-ostetrics-care-special .detail .chinese-web + .chinese-mobile {
+  margin-top: 5px;
+}
 .section-ostetrics-care-special .block-ostetrics-care-special .detail P + h4 {
   margin-top: 20px;
 }
@@ -3198,6 +3377,9 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
   font-size: 15px;
   color: #75777A;
 }
+.section-ostetrics-care-special .block-ostetrics-care-special .detail .chinese.chinese-mobile {
+  display: none;
+}
 .section-ostetrics-care-special .block-ostetrics-care-special .detail .english {
   text-align: center;
   font-size: 15px;
@@ -3214,6 +3396,7 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
   font-size: 15px;
   color: #75777A;
   padding-left: 25px;
+  margin-top: 5px;
 }
 .section-ostetrics-care-special .block-ostetrics-care-special .detail h4 + ul {
   margin-top: 5px;
@@ -3226,8 +3409,8 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 120px;
-  min-height: 48px;
+  min-width: 102px;
+  min-height: 34px;
   background-color: #8D7158;
   font-size: 13px;
   color: #fff;
@@ -3251,6 +3434,32 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
 }
 .section-ostetrics-care-swiper .block-ostetrics-care-swiper .swiperCare .swiper-wrapper .swiper-slide a:hover {
   opacity: 0.5;
+}
+.section-ostetrics-care-swiper .block-ostetrics-care-swiper .swiperCare .swiper-button-prev {
+  background-image: url(./../images/icon_swiper_big_left_gray.svg);
+  background-size: contain;
+  width: 48px;
+  height: 48px;
+  left: calc(50vw - 600px - 60px);
+  top: calc(50% - 24px);
+  opacity: 0.5;
+}
+.section-ostetrics-care-swiper .block-ostetrics-care-swiper .swiperCare .swiper-button-prev:hover {
+  background-image: url(./../images/icon_swiper_big_left_green.svg);
+  opacity: 1;
+}
+.section-ostetrics-care-swiper .block-ostetrics-care-swiper .swiperCare .swiper-button-next {
+  background-image: url(./../images/icon_swiper_big_right_gray.svg);
+  background-size: contain;
+  width: 48px;
+  height: 48px;
+  left: calc(50vw + 600px);
+  top: calc(50% - 24px);
+  opacity: 0.5;
+}
+.section-ostetrics-care-swiper .block-ostetrics-care-swiper .swiperCare .swiper-button-next:hover {
+  background-image: url(./../images/icon_swiper_big_right_green.svg);
+  opacity: 1;
 }
 
 .section-ostetrics-gentle-reminders {
@@ -3299,8 +3508,8 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 120px;
-  min-height: 48px;
+  min-width: 102px;
+  min-height: 34px;
   background-color: #8D7158;
   font-size: 13px;
   color: #fff;
@@ -3339,9 +3548,7 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
 }
 .section-health-data-info .block-health-data-info .data-list-cate .cate-list a.active, .section-health-data-info .block-health-data-info .data-list-cate .cate-list a:hover {
   color: #fff;
-  font-size: 14.5px;
   background-color: #133C2E;
-  min-height: 44px;
 }
 .section-health-data-info .block-health-data-info .caption {
   text-align: left;
@@ -3365,6 +3572,9 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
   color: #75777A;
   margin-top: 20px;
 }
+.section-health-data-info .block-health-data-info .info .mobile {
+  display: none;
+}
 
 .section-health-data-swiper {
   padding: 100px 0;
@@ -3384,6 +3594,30 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
 .section-health-data-swiper .block-health-data-swiper .swiperHealth .swiper-slide .desc h3 {
   font-size: 14px;
   color: #75777A;
+}
+.section-health-data-swiper .block-health-data-swiper .swiperHealth .swiper-button-prev {
+  background-image: url(./../images/icon_swiper_big_left_gray.svg);
+  background-size: contain;
+  width: 48px;
+  height: 48px;
+  left: calc(50vw - 600px - 60px);
+  opacity: 0.5;
+}
+.section-health-data-swiper .block-health-data-swiper .swiperHealth .swiper-button-prev:hover {
+  background-image: url(./../images/icon_swiper_big_left_green.svg);
+  opacity: 1;
+}
+.section-health-data-swiper .block-health-data-swiper .swiperHealth .swiper-button-next {
+  background-image: url(./../images/icon_swiper_big_right_gray.svg);
+  background-size: contain;
+  width: 48px;
+  height: 48px;
+  left: calc(50vw + 600px);
+  opacity: 0.5;
+}
+.section-health-data-swiper .block-health-data-swiper .swiperHealth .swiper-button-next:hover {
+  background-image: url(./../images/icon_swiper_big_right_green.svg);
+  opacity: 1;
 }
 
 .section-health-data-vision .block-health-data-vision .video iframe, .section-health-data-vision .block-health-data-vision .video video {
@@ -3644,23 +3878,54 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
   }
 }
 @media all and (max-width: 1330px) {
+  .section-swiper {
+    margin-top: 0;
+  }
+  .section-swiper .block-swiper .block-outer {
+    padding: 0;
+  }
   .section-swiper .swiper-button-next {
-    display: none;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    background-size: cover;
   }
   .section-swiper .swiper-button-prev {
-    display: none;
+    left: 15px;
+    width: 30px;
+    height: 30px;
+    background-size: cover;
   }
 }
 @media all and (max-width: 1280px) {
   .section-health-data-vision .block-health-data-vision .video iframe, .section-health-data-vision .block-health-data-vision .video video {
     height: 55vw;
   }
+  .section-ostetrics-care-swiper .block-ostetrics-care-swiper .swiperCare .swiper-button-next {
+    left: auto;
+    right: 15px;
+  }
+  .section-ostetrics-care-swiper .block-ostetrics-care-swiper .swiperCare .swiper-button-prev {
+    left: 15px;
+  }
+  .section-environment-introduction .block-environment-swiper .swiperEnvironment .swiper-button-next {
+    left: auto;
+    right: 15px;
+  }
+  .section-environment-introduction .block-environment-swiper .swiperEnvironment .swiper-button-prev {
+    left: 15px;
+  }
+  .section-health-data-swiper .block-health-data-swiper .swiperHealth .swiper-button-next {
+    left: auto;
+    right: 15px;
+  }
+  .section-health-data-swiper .block-health-data-swiper .swiperHealth .swiper-button-prev {
+    left: 15px;
+  }
 }
 @media all and (max-width: 1090px) {
   .section-physician-column .column-swiper {
     width: 100%;
-    margin-left: -10px;
-    margin-right: -10px;
   }
   .section-case-list .block-case-list .case-list-cate .case-list {
     width: 100%;
@@ -3669,19 +3934,19 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
   }
 }
 @media all and (max-width: 1024px) {
-  .section-swiper {
-    margin-top: 20px;
-  }
   .swiperHome {
-    padding-bottom: 50px;
+    padding-bottom: 0px;
+  }
+  .swiperHome .swiper-pagination {
+    bottom: 5px;
   }
   .dr .info .special {
-    overflow: hidden;
-    max-height: 77px;
+    /*overflow: hidden;
+    max-height: 77px;*/
   }
   .dr .info .special .tag span {
-    max-width: 100px;
-    min-width: inherit;
+    /*max-width: 100px;
+    min-width: inherit;*/
   }
 }
 @media all and (max-width: 992px) {
@@ -3706,13 +3971,11 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
   .section-brand-value .block-brand-value .caption a {
     display: none;
   }
-  .section-brand-value .block-brand-value .value-list-outer {
-    overflow-x: auto;
-    margin-left: -15px;
-    margin-right: -15px;
-  }
   .section-brand-value .block-brand-value .value-list-outer .value-list {
-    width: 992px;
+    justify-content: center;
+  }
+  .section-brand-value .block-brand-value .value-list-outer .value-list .item {
+    width: calc(33.3333333333% - 30px);
   }
   .section-environment-introduction .block-environment-swiper .swiperEnvironment .swiper-slide .desc h3 {
     font-size: 18px;
@@ -3724,10 +3987,10 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
     width: calc(33.3333333333% - 20px);
   }
   .section-health-data-info .block-health-data-info .data-list-cate .cate-list a.active {
-    font-size: 20px;
+    /*font-size: 20px;*/
   }
   .section-health-data-swiper .block-health-data-swiper .swiperHealth .swiper-slide .desc h3 {
-    font-size: 18px;
+    /*font-size: 18px;*/
   }
   .section-health-data-vision .block-health-data-vision .video + .caption {
     margin-top: 50px;
@@ -3747,6 +4010,12 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
   .section-environment-introduction .caption h2:after {
     background-color: #133C2E;
   }
+  .section-servcies-overview .block-servcies-overview .overview-list {
+    width: 100%;
+  }
+  .section-servcies-overview .block-servcies-overview .overview-list .item {
+    width: calc(33.3333333333% - 20px);
+  }
   .main-health-data-list {
     padding-top: 90px;
   }
@@ -3761,6 +4030,12 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
   }
 }
 @media all and (max-width: 767px) {
+  .swiperHome .swiper-slide .img img.web {
+    display: none;
+  }
+  .swiperHome .swiper-slide .img img.mobile {
+    display: flex;
+  }
   .section-swiper .block-info {
     padding: 50px 0;
   }
@@ -3786,13 +4061,8 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
   .section-about-us .block-about-us .info {
     margin-right: 0;
   }
-  .section-servcies-overview .block-servcies-overview .overview-list-outer {
-    overflow-x: auto;
-    margin-left: -10px;
-    margin-right: -10px;
-  }
-  .section-servcies-overview .block-servcies-overview .overview-list-outer .overview-list {
-    width: 767px;
+  .section-servcies-overview .block-servcies-overview .overview-list-outer .overview-list .item .info {
+    padding-bottom: 10px;
   }
   .section-expert-detail .block-expert-detail .dr-introduce .three-cols {
     display: block;
@@ -3808,6 +4078,12 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
     width: 100%;
     padding-left: 0;
     margin-top: 20px;
+  }
+  .section-expert-detail .block-expert-detail .dr-introduce .name-position-major.name-position-major-web {
+    display: none;
+  }
+  .section-expert-detail .block-expert-detail .dr-introduce .name-position-major.name-position-major-mobile {
+    display: block;
   }
   .section-specialty-leader .block-specialty-leader .dr-big .img {
     width: 100%;
@@ -3828,20 +4104,14 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
   .section-specialty-leader .block-specialty-leader .dr-big .info .name-position h3 .position {
     margin-left: 0;
   }
-  .section-specialty-leader .block-specialty-leader .dr-list-outer {
-    overflow-x: auto;
-  }
-  .section-specialty-leader .block-specialty-leader .dr-list-outer .dr-list {
-    width: 200vw;
-  }
   .section-specialty-leader .block-specialty-leader .dr-list-outer .dr-list .item {
     width: calc(50vw - 30px);
   }
   .section-refer {
-    padding: 50px 0;
+    padding: 40px 0;
   }
   .section-refer .block-banner-outer {
-    padding: 80px 0;
+    padding: 0;
   }
   .section-refer .img {
     /*display: none;*/
@@ -3856,13 +4126,13 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
     position: relative;
   }
   .section-brand-value {
-    padding: 50px 0;
+    padding: 40px 0;
   }
   .section-environment-introduction {
-    padding: 50px 0;
+    padding: 40px 0;
   }
   .section-environment-introduction {
-    padding: 50px 0;
+    padding: 40px 0;
   }
   .section-open-time .block-open-time .introduce {
     background-image: none !important;
@@ -3892,7 +4162,7 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
     padding: 25px;
   }
   .section-about-us .block-about-us .about-us-info + .two-cols {
-    margin-top: 50px;
+    margin-top: 40px;
   }
   .section-vision {
     padding-top: 50px;
@@ -3952,7 +4222,14 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
     min-width: 50px;
   }
   .section-health-data-swiper {
-    padding: 50px 0;
+    padding: 40px 0;
+  }
+  .section-health-data-introduce {
+    margin-top: 40px;
+    margin-bottom: 70px;
+  }
+  .section-health-data-introduce .block-health-data-introduce .block-outer {
+    padding: 0;
   }
   .section-health-data-introduce .block-health-data-introduce .introduce {
     background-image: none !important;
@@ -3962,24 +4239,37 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
     display: block;
   }
   .section-health-data-introduce .block-health-data-introduce .two-cols .col01 {
-    width: 100%;
+    width: calc(100% - 40px);
+    text-align: left;
+    padding-right: 40px;
   }
   .section-health-data-introduce .block-health-data-introduce .two-cols .col01 img {
     display: block;
   }
+  .section-health-data-introduce .block-health-data-introduce .two-cols .col02 h3 {
+    font-size: 16px;
+  }
+  .section-health-data-introduce .block-health-data-introduce .two-cols .col02 p {
+    font-size: 14px;
+  }
   .section-health-data-introduce .block-health-data-introduce .two-cols .col02 {
-    width: 100%;
+    width: calc(100% - 40px);
     padding-left: 0;
+    padding-right: 40px;
     margin-top: 20px;
   }
   .section-health-data-introduce .block-health-data-introduce .info {
     margin-top: 20px;
-    padding: 0 15px;
+    padding: 0 0 0 15px;
+    padding-left: 40px;
   }
   .section-health-data-introduce .block-health-data-introduce .info .box {
     margin-top: 0;
     width: calc(100% - 50px);
     padding: 25px;
+  }
+  .section-health-data-introduce .block-health-data-introduce .info .box p {
+    font-size: 14px;
   }
   .section-health-data-info .block-health-data-info .data-list-cate .cate-list-outer {
     margin-left: -15px;
@@ -3987,11 +4277,31 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
     padding-left: 15px;
     padding-right: 15px;
   }
+  .section-specialty-leader .block-specialty-leader .dr-list {
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-top: 40px;
+  }
   .section-specialty-leader .block-specialty-leader .dr-list .item {
     padding: 10px;
     width: calc(50% - 20px);
   }
+  .section-banner .block-banner .block-outer {
+    padding: 0;
+  }
+  .section-banner .img img.web {
+    display: none;
+  }
+  .section-banner .img img.mobile {
+    display: block;
+  }
+  .main-home .section-health-data-introduce {
+    margin-bottom: 40px;
+  }
   .caption h2 .chinese {
+    font-size: 20px;
+  }
+  .section-open-time .block-open-time .info .box h4 {
     font-size: 20px;
   }
 }
@@ -4002,14 +4312,31 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
   .dr .info .name-position h3 .name b {
     display: block;
   }
+  .section-vision .vision-list .item .desc h3 {
+    font-size: 16px;
+    text-align: left;
+  }
+  .section-vision .vision-list .item .desc h3.english {
+    font-size: 14px;
+  }
+  .section-vision .vision-list .item .desc p {
+    font-size: 14px;
+    text-align: left;
+  }
+  .section-outpatient-hours {
+    margin: 40px 0;
+  }
+  .section-physician-column {
+    margin-top: 40px;
+  }
+  .section-about-us .block-about-us .about-us-info {
+    margin-top: 40px;
+  }
   .section-case-list .block-case-list .case-list-cate .case-list .item {
     width: calc(50% - 20px);
   }
   .section-health-data-info .block-health-data-info .data-list-cate .cate-list a {
     font-size: 14px;
-  }
-  .section-health-data-info .block-health-data-info .data-list-cate .cate-list a.active {
-    font-size: 18px;
   }
   .section-servcies-info .block-servcies-info {
     margin-top: 50px;
@@ -4017,9 +4344,226 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
   .section-expert-detail .block-expert-detail .dr-introduce {
     margin-top: 20px;
   }
+  .section-servcies-overview .block-servcies-overview .overview-list {
+    width: 100%;
+  }
+  .section-servcies-overview .block-servcies-overview .overview-list .item {
+    width: calc(50% - 20px);
+  }
+  .section-specialty-leader .block-specialty-leader .dr-list-outer .dr-list {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  .section-specialty-leader .block-specialty-leader .dr-list-outer .dr-list .item {
+    width: calc(100% - 30px);
+  }
+  .section-specialty-leader .block-specialty-leader .dr-list .item {
+    padding: 10px;
+    width: calc(100% - 20px);
+  }
+  .section-ostetrics-care-treatment .block-ostetrics-care-treatment .detail span {
+    display: block;
+  }
+  .section-physician-column .column-swiper {
+    display: none;
+  }
+  .section-physician-column .column-list-mobile {
+    display: flex;
+  }
+  .section-about-us .block-about-us .about-us-info .chinese .mobile {
+    display: block;
+  }
+  .section-about-us .block-about-us .about-us-info .chinese .web {
+    display: none;
+  }
+  .section-about-us .block-about-us .about-us-info .english .mobile {
+    display: block;
+  }
+  .section-about-us .block-about-us .about-us-info .english .web {
+    display: none;
+  }
+  .section-vision .info .chinese {
+    text-align: left;
+  }
+  .section-vision .info .english {
+    text-align: left;
+  }
+  .section-vision .vision-list .item {
+    margin: 40px 0;
+  }
+  .section-vision .banner img.web {
+    display: none;
+  }
+  .section-vision .banner img.mobile {
+    display: block;
+  }
+  .section-environment-introduction .block-environment-swiper .swiperEnvironment .swiper-slide .desc h3 {
+    font-size: 14px;
+  }
+  .section-address .block-environment-introduction .map {
+    margin-top: 40px;
+  }
+  .section-open-time {
+    margin-top: 40px;
+    margin-bottom: 0px;
+  }
+  .section-open-time .block-open-time .block-outer {
+    padding: 0;
+  }
+  .section-open-time .block-open-time .two-cols .col01 {
+    width: calc(100% - 40px);
+    padding-right: 40px;
+  }
+  .section-open-time .block-open-time .two-cols .col02 {
+    width: calc(100% - 15px);
+    padding-left: 15px;
+  }
+  .section-open-time .block-open-time .two-cols .time p {
+    margin-top: 20px;
+  }
+  .section-open-time .block-open-time .info {
+    padding-right: 0;
+    padding-left: 0px;
+  }
+  .section-open-time .block-open-time .info .box {
+    padding: 25px 15px 80px 15px;
+    width: calc(100% - 30px);
+  }
+  .section-open-time .block-open-time .info .box ul {
+    margin-top: 20px;
+  }
+  .section-open-time .block-open-time .info .box h4 {
+    position: relative;
+    display: inline-block;
+  }
+  .section-open-time .block-open-time .info .box h4:after {
+    content: "";
+    position: absolute;
+    left: 120px;
+    top: 50%;
+    height: 1px;
+    background-color: #133C2E;
+    width: 180px;
+  }
+  .section-health-data-vision .block-health-data-vision .info .chinese {
+    text-align: left;
+  }
+  .section-health-data-vision .block-health-data-vision .info .english {
+    text-align: left;
+  }
+  .section-expert-detail .block-expert-detail .dr-introduce .name-position-major h2 .name {
+    font-size: 20px;
+  }
+  .section-expert-detail .block-expert-detail .dr-introduce .name-position-major h2 .name b {
+    font-size: 20px;
+  }
+  .section-expert-detail .block-expert-detail .dr-introduce .name-position-major h3 {
+    font-size: 16px;
+  }
+  .section-physician-column .block-physician-column {
+    padding-bottom: 70px;
+  }
+  .section-servcies-info .block-servcies-info .info .web {
+    display: none;
+  }
+  .section-servcies-info .block-servcies-info .info .mobile {
+    display: block;
+  }
+  .section-ostetrics-care-swiper .block-ostetrics-care-swiper .swiperCare .swiper-wrapper {
+    padding-bottom: 30px;
+  }
+  .section-ostetrics-gentle-reminders {
+    margin-bottom: 70px;
+  }
+  .section-servcies-overview .block-servcies-overview {
+    margin: 40px 0;
+  }
+  .section-ostetrics-care-treatment {
+    margin-top: 50px;
+  }
+  .section-ostetrics-care-treatment .block-ostetrics-care-treatment .detail .chinese {
+    text-align: left;
+  }
+  .section-ostetrics-care-treatment .block-ostetrics-care-treatment .detail .chinese.chinese-web {
+    display: none;
+  }
+  .section-ostetrics-care-treatment .block-ostetrics-care-treatment .detail .chinese.chinese-mobile {
+    display: block;
+  }
+  .section-ostetrics-care-treatment .block-ostetrics-care-treatment .detail .english {
+    text-align: left;
+  }
+  .section-ostetrics-care-special .block-ostetrics-care-special .detail .chinese {
+    text-align: left;
+  }
+  .section-ostetrics-care-special .block-ostetrics-care-special .detail .chinese.chinese-web {
+    display: none;
+  }
+  .section-ostetrics-care-special .block-ostetrics-care-special .detail .chinese.chinese-mobile {
+    display: block;
+  }
+  .section-ostetrics-care-special .block-ostetrics-care-special .detail .english {
+    text-align: left;
+  }
+  .section-ostetrics-care-special .block-ostetrics-care-special .detail h3 {
+    text-align: left;
+  }
+  .section-ostetrics-care-special .block-ostetrics-care-special .detail h4 {
+    text-align: left;
+  }
+  .section-ostetrics-care-special .block-ostetrics-care-special .detail p {
+    text-align: left;
+  }
+  .section-ostetrics-gentle-reminders .block-ostetrics-gentle-reminders .detail h3 {
+    text-align: left;
+  }
+  .section-ostetrics-care-swiper .block-ostetrics-care-swiper .swiperCare .swiper-button-next {
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    right: 15px;
+    top: calc(50% - 15px);
+  }
+  .section-ostetrics-care-swiper .block-ostetrics-care-swiper .swiperCare .swiper-button-prev {
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    left: 15px;
+    top: calc(50% - 15px);
+  }
+  .section-environment-introduction .block-environment-swiper .swiperEnvironment .swiper-button-next {
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    right: 15px;
+  }
+  .section-environment-introduction .block-environment-swiper .swiperEnvironment .swiper-button-prev {
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    left: 15px;
+  }
+  .section-health-data-swiper .block-health-data-swiper .swiperHealth .swiper-button-next {
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    right: 15px;
+  }
+  .section-health-data-swiper .block-health-data-swiper .swiperHealth .swiper-button-prev {
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    left: 15px;
+  }
+  .section-health-data-info .block-health-data-info .info .web {
+    display: none;
+  }
+  .section-health-data-info .block-health-data-info .info .mobile {
+    display: block;
+  }
   .dr .info .special {
-    overflow: hidden;
-    max-height: 72px;
+    /*overflow: hidden;
+    max-height: 72px;*/
   }
   .dr .info .special .tag span {
     max-width: 100px;
@@ -4041,29 +4585,25 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
   }
 }
 @media all and (max-width: 480px) {
-  .section-specialty-leader .block-specialty-leader .dr-list-outer {
-    margin-left: -15px;
-    margin-right: -15px;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  .section-specialty-leader .block-specialty-leader .dr-list-outer .dr-list {
-    width: 320vw;
-  }
   .section-specialty-leader .block-specialty-leader .dr-list-outer .dr-list .item {
-    width: calc(80vw - 20px);
+    width: calc(100% - 20px);
     padding: 10px;
   }
-  .section-brand-value .block-brand-value .value-list-outer {
-    margin-left: -20px;
-    margin-right: -20px;
-  }
-  .section-brand-value .block-brand-value .value-list-outer .value-list {
-    width: 350vw;
-    padding-left: 15vw;
-    padding-right: 15vw;
-  }
   .section-brand-value .block-brand-value .value-list-outer .value-list .item {
-    width: calc(70vw - 30px);
+    width: calc(100% - 30px);
+  }
+  .section-case-list .block-case-list .case-list-cate .case-list {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .section-case-list .block-case-list .case-list-cate .case-list .item {
+    margin: 10px 0;
+    width: 100%;
+  }
+  .section-servcies-overview .block-servcies-overview .overview-list-outer {
+    display: none;
+  }
+  .section-servcies-overview .block-servcies-overview .swiper-overview-outer {
+    display: block;
   }
 }/*# sourceMappingURL=main.css.map */

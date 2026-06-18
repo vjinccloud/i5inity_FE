@@ -133,6 +133,16 @@ function setSider(){
 			},
 		});
 	}
+	
+	if($('.swiper-overview-outer .swiperOverview').length>0){
+		var swiperOverview = new Swiper(".swiper-overview-outer .swiperOverview", {	
+			loop:true,
+			navigation: {
+				nextEl: ".swiper-overview-outer .swiper-button-next",
+				prevEl: ".swiper-overview-outer .swiper-button-prev",
+			},
+		});
+	}
 	if($('.swiperColumn').length>0){
 		var swiperColumn = new Swiper(".swiperColumn", {	
 			loop:true,
@@ -178,6 +188,10 @@ function setSider(){
 				el: ".swiperCare .swiper-pagination",
 				clickable: true,
 			},
+			navigation: {
+				nextEl: ".swiperCare .swiper-button-next",
+				prevEl: ".swiperCare .swiper-button-prev",
+			},
 			spaceBetween: 20,
 			breakpoints: {
 				350: {
@@ -208,6 +222,10 @@ function setSider(){
 			w: "auto",
 			centeredSlides: true,
 			spaceBetween: 20,
+			navigation: {
+				nextEl: ".swiperHealth .swiper-button-next",
+				prevEl: ".swiperHealth .swiper-button-prev",
+			},
 			breakpoints: {
 				350:{
 				slidesPerView: 1.2,	

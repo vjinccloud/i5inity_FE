@@ -198,6 +198,9 @@
             display: flex;
             img{
                 width: 100%;
+                &.mobile{
+                    display: none;
+                }
             }
         }
     }
@@ -392,9 +395,13 @@
     margin-top: 50px;
     .swiper-button-prev{  
         left: -50px;
+        width: 40px;
+        height: 40px
     }
     .swiper-button-next{  
         right: -50px;
+        width: 40px;
+        height: 40px;
     }
     .block-info{
         padding: 100px 0;
@@ -512,10 +519,18 @@
             .chinese{
                 font-size: 16px;
                 color: #75777A;
+                .mobile{
+                    display: none;
+                    text-align: left;
+                }
             }
             .english{
                 font-size: 14px;
                 color: #75777A;
+                .mobile{
+                    display: none;
+                    text-align: left;
+                }
             }
             .chinese + .english{
                 margin-top: 30px;
@@ -559,6 +574,9 @@
         display: flex;
         img{
             width: 100%;
+            &.mobile{
+                display: none;
+            }
         }
     }
     .info{
@@ -671,6 +689,9 @@
         margin: 50px 0;
         img{
             width: 100%;
+            &.mobile{
+                display: none;
+            }
         }
     }
     .vision-list{
@@ -949,7 +970,33 @@
                 }
             }
         }
+        .dr-more{
+            text-align: right;
+            a{
+                font-size: 14px;
+                color: #8D7158;
+                display: inline-flex;
+                align-items: center;               
+                i{
+                    display: inline-block;
+                    width: 16px;
+                    height: 16px;
+                    background-image: url(./../images/icon_more_golden.svg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
+                &:hover{
+                    color: #133C2E;
+                    text-decoration: underline;
+                    i{
+                    background-image: url(./../images/icon_more_green.svg);  
+                    }
+                }
+            }
+        }
+        
     }
+    
 
 }
 .section-expert-detail{
@@ -971,6 +1018,10 @@
                 }
             }
             .name-position-major{
+                &.name-position-major-mobile{
+                    display: none;
+                    margin-bottom: 20px;
+                }
                 h2{                   
                     span{
                         display: block;
@@ -1097,6 +1148,7 @@
                 width: 48px;
                 height: 48px;
                 left: calc(50vw - 600px - 60px);
+               
                 opacity: 0.5;
                 &:hover{
                     background-image: url(./../images/icon_swiper_big_left_green.svg);
@@ -1109,6 +1161,7 @@
                 width: 48px;
                 height: 48px;
                 left: calc(50vw + 600px );
+               
                 opacity: 0.5;
                 &:hover{
                     background-image: url(./../images/icon_swiper_big_right_green.svg);
@@ -1238,6 +1291,16 @@
             
         }
     }
+    .column-list-mobile{
+        display: none;
+        flex-wrap: wrap;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        .item{
+            width: 100%;
+            margin: 10px 0;
+        }
+    }
     .block-physician-column{
         padding-bottom: 100px;
         .more{
@@ -1268,7 +1331,7 @@
 }
 .section-outpatient-hours{
     margin: 100px 0;
-    
+    overflow: hidden;
     .outpatient-hours{
         .two-cols{
             display: flex;
@@ -1353,7 +1416,11 @@
             .english{
                 font-size: 14px;
                 color: #75777A;
-                margin-top: 20px;
+                margin-top: 30px;
+            }
+            .mobile{
+                display: none;
+                text-align: left;
             }
         }
     }
@@ -1426,6 +1493,7 @@
         .overview-list{
             display: flex;
             flex-wrap: wrap;
+            justify-content: center;
             margin-top: 50px;
             width: 830px;
             margin-left: auto;
@@ -1464,6 +1532,10 @@
                         -moz-writing-mode: vertical-rl;
                         writing-mode: vertical-rl;
                         letter-spacing: 6px;
+                        text-align: center;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
                     }
                     h4{
                         width: 26px;
@@ -1475,6 +1547,10 @@
                         -moz-writing-mode: vertical-rl;
                         writing-mode: vertical-rl;
                         letter-spacing: 6px;
+                        text-align: center;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
                     }
                 }
                 .img{
@@ -1487,6 +1563,87 @@
                 }
             }
         }
+        .swiper-overview-outer{
+            display: none;
+            padding: 0 50px;
+            margin-top: 40px;
+            .swiperOverview{           
+                .item{               
+                    width: 100%;
+                    background-color: #F8F8F8;
+                    a{
+                        display: block;
+                        &:hover{
+                            .info{
+                                background-color: #C9D2CD;
+                            }
+                            .img{
+                                img{
+                                    transform: scale(1.15);
+                                }
+                            }
+                        }
+                    }
+                    .info{
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        padding: 30px 0 20px 0;
+                        min-height: calc(270px - 50px);
+                        h3{
+                            width: 40px;     
+                            height: max-content;  
+                            font-size: 16px;
+                            font-weight: 600;
+                            color: #133C2E;
+                            -ms-writing-mode: vertical-rl;
+                            -webkit-writing-mode: vertical-rl;
+                            -moz-writing-mode: vertical-rl;
+                            writing-mode: vertical-rl;
+                            letter-spacing: 6px;
+                            line-height: 1.4;
+                            margin-right: 20px;
+                        }
+                        h4{
+                            width: 26px;
+                            height: max-content;
+                            font-size: 12px;
+                            color: #75777A;
+                            -ms-writing-mode: vertical-rl;
+                            -webkit-writing-mode: vertical-rl;
+                            -moz-writing-mode: vertical-rl;
+                            writing-mode: vertical-rl;
+                            letter-spacing: 6px;
+                           
+                            line-height: 1.4;
+                        }
+                    }
+                    .img{
+                        display: flex;
+                        overflow: hidden;
+                        img{
+                            width: 100%;
+                            transition: 0.5s ease;
+                        }
+                    }
+                }
+                
+            }
+            .swiper-button-next{
+                width: 30px;
+                height: 30px;
+                background-size: contain;
+                right: 15px;
+            }
+            .swiper-button-prev{
+                width: 30px;
+                height: 30px;
+                background-size: contain;
+                left: 15px;
+            }
+        }
+       
+
     }
 }
 .section-case-list{
@@ -1716,6 +1873,9 @@
                 color: #75777A;
                 text-align: center;
                 margin-bottom: 30px;
+                &.chinese-mobile{
+                    display: none;
+                }
             }
             .english{
                 margin-top: 30px;
@@ -1730,9 +1890,9 @@
             a{
                 display: inline-flex;
                 align-items: center;
-                justify-content: center;
-                min-width: 120px;
-                min-height: 48px;
+                justify-content: center;                
+                min-width: 102px;
+                min-height: 34px;
                 background-color: #8D7158;
                 font-size: 13px;
                 color: #fff;
@@ -1768,6 +1928,9 @@
             h4 + p{
                 margin-top: 5px;
             }
+            .chinese-web + .chinese-mobile{
+                margin-top: 5px;
+            }
             P + h4{
                 margin-top: 20px;
             }
@@ -1787,6 +1950,9 @@
                 text-align: center;
                 font-size: 15px;
                 color: #75777A;
+                &.chinese-mobile{
+                    display: none;
+                }
             }
             .english{                
                 text-align: center;
@@ -1803,6 +1969,7 @@
                 font-size: 15px;
                 color: #75777A;   
                 padding-left: 25px;      
+                margin-top: 5px;
             }
             h4 + ul{
                 margin-top: 5px;
@@ -1815,8 +1982,8 @@
                 display: inline-flex;
                 align-items: center;
                 justify-content: center;
-                min-width: 120px;
-                min-height: 48px;
+                min-width: 102px;
+                min-height: 34px;
                 background-color: #8D7158;
                 font-size: 13px;
                 color: #fff;
@@ -1846,6 +2013,32 @@
                             opacity: 0.5;
                         }
                     }
+                }
+            }
+            .swiper-button-prev{
+                background-image: url(./../images/icon_swiper_big_left_gray.svg);
+                background-size: contain;
+                width: 48px;
+                height: 48px;
+                left: calc(50vw - 600px - 60px);
+                top: calc(50% - 24px);
+                opacity: 0.5;                
+                &:hover{
+                    background-image: url(./../images/icon_swiper_big_left_green.svg);
+                    opacity: 1;
+                }
+            }
+            .swiper-button-next{
+                background-image: url(./../images/icon_swiper_big_right_gray.svg);
+                background-size: contain;
+                width: 48px;
+                height: 48px;
+                left: calc(50vw + 600px );
+                top: calc(50% - 24px);
+                opacity: 0.5;
+                &:hover{
+                    background-image: url(./../images/icon_swiper_big_right_green.svg);
+                    opacity: 1;
                 }
             }
         }
@@ -1897,8 +2090,8 @@
                 display: inline-flex;
                 align-items: center;
                 justify-content: center;
-                min-width: 120px;
-                min-height: 48px;
+                min-width: 102px;
+                min-height: 34px;
                 background-color: #8D7158;
                 font-size: 13px;
                 color: #fff;
@@ -1936,10 +2129,9 @@
                     background-color: #F3F4F6;
                     margin: 0 5px;
                     &.active,&:hover{
-                        color: #fff;
-                        font-size: 14.5px;
+                        color: #fff;                        
                         background-color: #133C2E;
-                        min-height: 44px;
+                       
                     }
                 }
             }
@@ -1968,6 +2160,9 @@
                 color: #75777A;
                 margin-top: 20px;
             }
+            .mobile{
+                display: none;
+            }
         }
     }
 }
@@ -1993,6 +2188,30 @@
                         font-size: 14px;
                         color: #75777A;
                     }
+                }
+            }
+            .swiper-button-prev{
+                background-image: url(./../images/icon_swiper_big_left_gray.svg);
+                background-size: contain;
+                width: 48px;
+                height: 48px;
+                left: calc(50vw - 600px - 60px);               
+                opacity: 0.5;                
+                &:hover{
+                    background-image: url(./../images/icon_swiper_big_left_green.svg);
+                    opacity: 1;
+                }
+            }
+            .swiper-button-next{
+                background-image: url(./../images/icon_swiper_big_right_gray.svg);
+                background-size: contain;
+                width: 48px;
+                height: 48px;
+                left: calc(50vw + 600px ); 
+                opacity: 0.5;
+                &:hover{
+                    background-image: url(./../images/icon_swiper_big_right_green.svg);
+                    opacity: 1;
                 }
             }
         }
@@ -2334,12 +2553,24 @@
 @media all and (max-width: 1366px) {}
 
 @media all and (max-width: 1330px) {
-    .section-swiper{       
+    .section-swiper{    
+        margin-top: 0;
+        .block-swiper{
+            .block-outer{
+                padding: 0;
+            }
+        }   
         .swiper-button-next{
-            display: none;
+           right: 15px;    
+           width: 30px;
+           height: 30px;
+           background-size: cover;       
         }
         .swiper-button-prev{
-            display: none;
+            left: 15px;
+            width: 30px;
+            height: 30px;
+            background-size: cover            
         }
     }
 }
@@ -2354,15 +2585,51 @@
             }
         } 
     } 
-   
+    .section-ostetrics-care-swiper{
+        .block-ostetrics-care-swiper{
+            .swiperCare{
+                .swiper-button-next{
+                    left: auto;
+                    right: 15px;
+                }
+                .swiper-button-prev{
+                    left: 15px;
+                }
+            }   
+        } 
+    } 
+    .section-environment-introduction{
+        .block-environment-swiper{
+            .swiperEnvironment{
+                .swiper-button-next{
+                    left: auto;
+                    right: 15px;
+                }
+                .swiper-button-prev{
+                    left: 15px;
+                }
+            } 
+        } 
+    } 
+    .section-health-data-swiper{
+        .block-health-data-swiper{
+            .swiperHealth{
+                .swiper-button-next{
+                    left: auto;
+                    right: 15px;
+                }
+                .swiper-button-prev{
+                    left: 15px;
+                }
+            }
+        } 
+    }   
 }
 
 @media all and (max-width: 1090px) {
     .section-physician-column{
         .column-swiper{
-            width: 100%;
-            margin-left: -10px;
-            margin-right: -10px;
+            width: 100%;         
         }
     } 
     .section-case-list{
@@ -2378,23 +2645,23 @@
     } 
 }
 
-@media all and (max-width: 1024px) {
-    .section-swiper{
-        margin-top: 20px;        
-    }
+@media all and (max-width: 1024px) {    
     .swiperHome{
-        padding-bottom: 50px;
+        padding-bottom: 0px;
+        .swiper-pagination{
+            bottom: 5px;
+        }
     }   
     
     .dr{
         .info{
             .special{
-                overflow: hidden;
-                max-height: 77px;
+                /*overflow: hidden;
+                max-height: 77px;*/
                 .tag{
                     span{
-                        max-width: 100px;
-                        min-width: inherit;
+                        /*max-width: 100px;
+                        min-width: inherit;*/
                     }
                 } 
             } 
@@ -2440,11 +2707,12 @@
                 }
             }
             .value-list-outer{
-                overflow-x: auto;
-                margin-left: -15px;
-                margin-right: -15px;
+               
                 .value-list{
-                    width: 992px;
+                    justify-content: center;
+                   .item{
+                        width: calc(100% / 3 - 30px);
+                   }
                 }
             }
         } 
@@ -2488,7 +2756,7 @@
                 .cate-list{
                     a{
                         &.active{
-                            font-size: 20px;
+                            /*font-size: 20px;*/
                         }
                     }
                 }  
@@ -2501,7 +2769,7 @@
                 .swiper-slide{
                     .desc{
                         h3{
-                            font-size: 18px;
+                           /*font-size: 18px;*/
                         }
                     } 
                 } 
@@ -2536,6 +2804,16 @@
             }
         } 
     } 
+    .section-servcies-overview{
+        .block-servcies-overview{
+            .overview-list{
+                width: 100%;
+                .item{
+                    width: calc(100% / 3 - 20px);
+                }
+            } 
+        } 
+    } 
     .main-health-data-list{
         padding-top: 90px;
     }
@@ -2563,6 +2841,20 @@
 @media all and (max-width: 768px) {}
 
 @media all and (max-width: 767px) {
+    .swiperHome{
+        .swiper-slide{
+            .img{
+                img{
+                    &.web{
+                        display: none;
+                    }
+                    &.mobile{
+                        display: flex;
+                    }
+                }
+            } 
+        } 
+    } 
     .section-swiper{
         .block-info{
             padding: 50px 0;
@@ -2604,14 +2896,13 @@
     }  
     .section-servcies-overview{
         .block-servcies-overview{
-            .overview-list-outer{
-                overflow-x: auto;
-                margin-left: -10px;
-                margin-right: -10px;
+            .overview-list-outer{                
                 .overview-list{
-                    width: 767px;
+                    
                     .item{
-                        
+                        .info{
+                            padding-bottom: 10px;
+                        }
                     }
                 }
             }
@@ -2633,6 +2924,14 @@
                         width: 100%;
                         padding-left: 0;
                         margin-top: 20px;
+                    }
+                }
+                .name-position-major{
+                    &.name-position-major-web{
+                        display: none;
+                    }
+                    &.name-position-major-mobile{
+                        display: block;
                     }
                 }
             } 
@@ -2663,10 +2962,8 @@
                     } 
                 } 
             } 
-            .dr-list-outer{
-                overflow-x: auto;
-                .dr-list{
-                    width: 200vw;
+            .dr-list-outer{               
+                .dr-list{                   
                     .item{
                         width: calc(50vw - 30px);
                     }
@@ -2675,9 +2972,9 @@
         } 
     } 
     .section-refer{ 
-        padding: 50px 0;
+        padding: 40px 0;
         .block-banner-outer{
-            padding: 80px 0;
+            padding: 0;
         }
         .img{
             /*display: none;*/
@@ -2693,13 +2990,13 @@
         }
     } 
     .section-brand-value{
-        padding: 50px 0;
+        padding: 40px 0;
     }
     .section-environment-introduction{
-        padding: 50px 0;
+        padding: 40px 0;
     }
     .section-environment-introduction{
-        padding: 50px 0;
+        padding: 40px 0;
     }
     .section-open-time{
         .block-open-time{
@@ -2735,7 +3032,7 @@
     .section-about-us{
         .block-about-us{
             .about-us-info + .two-cols{
-                margin-top: 50px;
+                margin-top: 40px;
             }
         } 
     } 
@@ -2825,10 +3122,15 @@
         } 
     }  
     .section-health-data-swiper{
-        padding: 50px 0;
+        padding: 40px 0;
     }   
     .section-health-data-introduce{
+        margin-top: 40px;
+        margin-bottom: 70px;
         .block-health-data-introduce{
+            .block-outer{
+                padding: 0;
+            }
             .introduce{
                 background-image: none !important;
                 padding-bottom:0;
@@ -2836,24 +3138,37 @@
             .two-cols{
                 display: block;
                 .col01{
-                    width: 100%;
+                    width: calc(100% - 40px);
+                    text-align: left;
+                    padding-right: 40px;                    
                     img{
                         display: block;
                     }
                 } 
                 .col02{
-                    width: 100%;
+                    h3{
+                        font-size: 16px;
+                    }
+                    p{
+                        font-size: 14px;
+                    }
+                    width: calc(100% - 40px);
                     padding-left: 0;
+                    padding-right: 40px;
                     margin-top: 20px;
                 }
             } 
             .info{
                 margin-top: 20px;
-                padding: 0 15px;
+                padding: 0 0 0 15px;
+                padding-left: 40px;
                 .box{
                     margin-top: 0;
                     width: calc(100% - 50px);
                     padding: 25px;
+                    p{
+                        font-size: 14px;
+                    }
                 }
             } 
         } 
@@ -2876,6 +3191,9 @@
     .section-specialty-leader{
         .block-specialty-leader{
             .dr-list{
+                margin-left: -10px;
+                margin-right: -10px;
+                margin-top: 40px;
                 .item {
                     padding: 10px;
                     width: calc(100% / 2 - 20px);
@@ -2883,6 +3201,28 @@
             } 
         } 
     } 
+    .section-banner{
+        .block-banner{
+            .block-outer{
+                padding: 0;
+            }
+        }
+        .img{
+            img{
+                &.web{
+                    display: none;
+                }
+                &.mobile{
+                    display: block;
+                }
+            }
+        } 
+    } 
+    .main-home{
+        .section-health-data-introduce{
+            margin-bottom: 40px;
+        }
+    }
     .caption{
         h2{
             .chinese{
@@ -2891,6 +3231,17 @@
             
         } 
     }
+    .section-open-time{
+        .block-open-time{
+            .info{
+                .box{
+                    h4{
+                        font-size: 20px;
+                    }
+                } 
+            } 
+        } 
+    } 
 }
 
 
@@ -2908,7 +3259,39 @@
                 } 
             } 
         } 
-    }     
+    }    
+    .section-vision{
+        .vision-list{
+            .item{
+                .desc{
+                    h3{
+                        font-size: 16px;
+                        text-align: left;
+                        &.english {
+                            font-size: 14px;
+                        }
+                    }
+                    p{
+                        font-size: 14px;
+                        text-align: left;
+                    }
+                }  
+            } 
+        } 
+    } 
+    .section-outpatient-hours{
+        margin: 40px 0;
+    }
+    .section-physician-column{
+        margin-top: 40px;   
+    }
+    .section-about-us{
+        .block-about-us{
+            .about-us-info{
+                margin-top: 40px;
+            }
+        } 
+    } 
     .section-case-list{
         .block-case-list{
             .case-list-cate{
@@ -2925,10 +3308,7 @@
             .data-list-cate{
                 .cate-list{
                     a{
-                        font-size: 14px;
-                        &.active{
-                            font-size: 18px;
-                        }
+                        font-size: 14px;                        
                     }
                 }  
             } 
@@ -2946,11 +3326,367 @@
             }
         } 
     } 
-     .dr{
+    .section-servcies-overview{
+        .block-servcies-overview{
+            .overview-list{
+                width: 100%;
+                .item{
+                    width: calc(100% / 2 - 20px);
+                }
+            } 
+        } 
+    } 
+    .section-specialty-leader{
+        .block-specialty-leader{
+            .dr-list-outer{
+                .dr-list{
+                    margin-left: -10px;
+                    margin-right: -10px;
+                    .item{
+                        width: calc(100% - 30px);
+                    }
+                } 
+            } 
+        } 
+    } 
+    .section-specialty-leader{
+        .block-specialty-leader{
+            .dr-list{
+                .item {
+                    padding: 10px;
+                    width: calc(100% - 20px);
+                }
+            } 
+        } 
+    } 
+    .section-ostetrics-care-treatment{
+        .block-ostetrics-care-treatment{
+            .detail{
+                span{
+                    display: block;
+                }
+            }
+        } 
+    } 
+    .section-physician-column{
+        .column-swiper{
+            display: none;
+        }
+        .column-list-mobile{
+            display: flex;
+        }
+    } 
+    .section-about-us{
+        .block-about-us{
+            .about-us-info{
+                .chinese{
+                    .mobile{
+                        display: block;
+                    }
+                    .web{
+                        display: none;
+                    }
+                } 
+                .english{
+                    .mobile{
+                        display: block;
+                    }
+                    .web{
+                        display: none;
+                    }
+                }
+            } 
+        } 
+    }
+    .section-vision{
+        .info{
+            .chinese{
+                text-align: left;
+            }
+            .english{
+                text-align: left;
+            }
+        } 
+        .vision-list{
+            .item{
+                margin: 40px 0;
+            }
+        } 
+        .banner{
+            img{
+                &.web{
+                    display: none;
+                }
+                &.mobile{
+                    display: block;
+                }
+            }
+        } 
+    } 
+    .section-environment-introduction{
+        .block-environment-swiper{
+            .swiperEnvironment{
+                .swiper-slide{
+                    .desc{
+                        h3{
+                            font-size: 14px;
+                        }
+                    } 
+                } 
+            } 
+        } 
+    } 
+    .section-address{
+        .block-environment-introduction{
+            .map{
+                margin-top: 40px;
+            }
+        } 
+    } 
+    .section-open-time{
+        margin-top: 40px;
+        margin-bottom: 0px;
+        .block-open-time{
+            .block-outer{
+                padding: 0;
+            }
+            .two-cols{                
+                .col01{
+                    width: calc(100% - 40px);
+                    padding-right: 40px;
+                }
+                .col02{
+                    width: calc(100% - 15px);
+                    padding-left: 15px;
+                }
+                .time{
+                    p{
+                        margin-top: 20px;
+                    }
+                } 
+            }
+            
+            .info{
+                padding-right: 0;
+                padding-left: 0px;
+                .box{
+                    padding: 25px 15px 80px 15px;
+                    width: calc(100% - 30px);
+                    ul{
+                        margin-top: 20px;
+                    }
+                    h4{
+                        position: relative;
+                        display: inline-block;
+                        &:after{
+                            content: "";
+                            position: absolute;
+                            left: 120px;
+                            top: 50%;
+                            height: 1px;
+                            background-color: #133C2E;
+                            width: 180px;
+                        }
+                    }
+                }
+            } 
+        }
+    }
+    .section-health-data-vision{
+        .block-health-data-vision{
+            .info{
+                .chinese{
+                    text-align: left;
+                }
+                .english{
+                    text-align: left;
+                }
+            } 
+        } 
+    } 
+    .section-expert-detail{
+        .block-expert-detail{
+            .dr-introduce{
+                .name-position-major{
+                    h2{
+                        .name{
+                            font-size: 20px;
+                            b{
+                                font-size: 20px;
+                            }
+                            
+                        }
+                    } 
+                    h3{
+                        font-size: 16px;
+                    }
+                } 
+            } 
+        } 
+    } 
+    .section-physician-column{
+        .block-physician-column{
+            padding-bottom: 70px;
+        }
+    } 
+    .section-servcies-info{
+        .block-servcies-info{            
+            .info{
+                .web{
+                    display: none;
+                }
+                .mobile{
+                    display: block;
+                }
+            }
+        }
+    }
+    .section-ostetrics-care-swiper{
+        .block-ostetrics-care-swiper{
+            .swiperCare{
+                .swiper-wrapper{
+                    padding-bottom: 30px;
+                }
+            } 
+        } 
+    } 
+    .section-ostetrics-gentle-reminders{
+        margin-bottom: 70px;
+    }
+    .section-servcies-overview{
+        .block-servcies-overview{
+            margin: 40px 0;
+        }
+    }     
+    .section-ostetrics-care-treatment{
+        margin-top: 50px;        
+        .block-ostetrics-care-treatment{
+            .detail{
+                .chinese{
+                    text-align: left;
+                    &.chinese-web{
+                        display: none;
+                    }
+                    &.chinese-mobile{
+                        display: block;
+                    }
+                }
+                .english{
+                    text-align: left;
+                }
+            }
+        }        
+    }
+    .section-ostetrics-care-special{
+        .block-ostetrics-care-special{
+            .detail{
+                .chinese{
+                    text-align: left;
+                    &.chinese-web{
+                        display: none;
+                    }
+                    &.chinese-mobile{
+                        display: block;
+                    }
+                }
+                .english{
+                    text-align: left;
+                }
+                h3{
+                    text-align: left;
+                }
+                h4{
+                   text-align: left; 
+                }
+                p{
+                    text-align: left;
+                }
+            } 
+        } 
+    } 
+    .section-ostetrics-gentle-reminders{
+        .block-ostetrics-gentle-reminders{
+            .detail{
+                h3{
+                    text-align: left;
+                }
+            } 
+        } 
+    } 
+    .section-ostetrics-care-swiper{
+        .block-ostetrics-care-swiper{
+            .swiperCare{
+                .swiper-button-next{
+                    width: 30px;
+                    height: 30px;
+                    background-size: contain;
+                    right: 15px;
+                    top: calc(50% - 15px);
+                }
+                .swiper-button-prev{
+                    width: 30px;
+                    height: 30px;
+                    background-size: contain;
+                    left: 15px;
+                    top: calc(50% - 15px);
+                }
+            }   
+        } 
+    } 
+    .section-environment-introduction{
+        .block-environment-swiper{
+            .swiperEnvironment{
+                .swiper-button-next{
+                    width: 30px;
+                    height: 30px;
+                    background-size: contain;
+                    right: 15px;                   
+                }
+                .swiper-button-prev{
+                    width: 30px;
+                    height: 30px;
+                    background-size: contain;
+                    left: 15px;                   
+                }
+            } 
+        } 
+    } 
+    .section-health-data-swiper{
+        .block-health-data-swiper{
+            .swiperHealth{
+                .swiper-button-next{
+                    width: 30px;
+                    height: 30px;
+                    background-size: contain;
+                    right: 15px;                   
+                }
+                .swiper-button-prev{
+                    width: 30px;
+                    height: 30px;
+                    background-size: contain;
+                    left: 15px;
+                    
+                }
+            }
+        } 
+    }   
+    .section-health-data-info{
+        .block-health-data-info{
+            .info{
+                .web{
+                    display: none;
+                }
+                .mobile{
+                    display: block;
+                }
+            } 
+        } 
+    } 
+    .dr{
         .info{
             .special{
-                overflow: hidden;
-                max-height: 72px;
+                /*overflow: hidden;
+                max-height: 72px;*/
                 .tag{
                     span{
                         max-width: 100px;                       
@@ -2988,15 +3724,10 @@
 @media all and (max-width: 480px) {
     .section-specialty-leader{
         .block-specialty-leader{
-            .dr-list-outer{
-                margin-left: -15px;
-                margin-right: -15px;
-                padding-left: 20px;
-                padding-right: 20px;
-                .dr-list{                    
-                    width: 320vw;
+            .dr-list-outer{               
+                .dr-list{ 
                     .item{
-                        width: calc(80vw - 20px);
+                        width: calc(100% - 20px);
                         padding: 10px;
                         
                     }
@@ -3007,19 +3738,40 @@
     } 
     .section-brand-value{
         .block-brand-value{
-            .value-list-outer{
-                margin-left: -20px;
-                margin-right: -20px;
+            .value-list-outer{               
                 .value-list{
-                    width: 350vw;
-                    padding-left: 15vw;
-                    padding-right: 15vw;
+                   
                     .item{
-                        width: calc(70vw - 30px);
+                        width: calc(100% - 30px);
                     }
                 }
             } 
         } 
+    } 
+    .section-case-list{
+        .block-case-list{
+            .case-list-cate{
+                .case-list{
+                    margin-left: 0;
+                    margin-right: 0;
+                    .item{
+                        margin: 10px 0;
+                        width: 100%; 
+                    }
+                } 
+            } 
+        } 
+    } 
+    .section-servcies-overview{
+        .block-servcies-overview{
+            .overview-list-outer{
+                display: none;
+            }
+            .swiper-overview-outer{
+                display: block;
+            }
+        } 
+
     } 
 }
 
