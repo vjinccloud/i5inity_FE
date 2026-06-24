@@ -3579,6 +3579,9 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
 .section-health-data-swiper {
   padding: 100px 0;
 }
+.section-health-data-swiper .block-health-data-swiper .swiperHealth {
+  padding-bottom: 35px;
+}
 .section-health-data-swiper .block-health-data-swiper .swiperHealth .swiper-slide a {
   display: block;
 }
@@ -3602,6 +3605,7 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
   height: 48px;
   left: calc(50vw - 600px - 60px);
   opacity: 0.5;
+  top: calc(50% - 24px);
 }
 .section-health-data-swiper .block-health-data-swiper .swiperHealth .swiper-button-prev:hover {
   background-image: url(./../images/icon_swiper_big_left_green.svg);
@@ -3614,6 +3618,7 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
   height: 48px;
   left: calc(50vw + 600px);
   opacity: 0.5;
+  top: calc(50% - 24px);
 }
 .section-health-data-swiper .block-health-data-swiper .swiperHealth .swiper-button-next:hover {
   background-image: url(./../images/icon_swiper_big_right_green.svg);

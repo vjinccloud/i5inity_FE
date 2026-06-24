@@ -2170,6 +2170,7 @@
     padding: 100px 0;
     .block-health-data-swiper{
         .swiperHealth {
+            padding-bottom: 35px;
             .swiper-slide{
                 a{
                     display: block;
@@ -2196,7 +2197,8 @@
                 width: 48px;
                 height: 48px;
                 left: calc(50vw - 600px - 60px);               
-                opacity: 0.5;                
+                opacity: 0.5;   
+                top: calc(50% - 24px);             
                 &:hover{
                     background-image: url(./../images/icon_swiper_big_left_green.svg);
                     opacity: 1;
@@ -2209,6 +2211,7 @@
                 height: 48px;
                 left: calc(50vw + 600px ); 
                 opacity: 0.5;
+                top: calc(50% - 24px); 
                 &:hover{
                     background-image: url(./../images/icon_swiper_big_right_green.svg);
                     opacity: 1;

@@ -222,6 +222,10 @@ function setSider(){
 			w: "auto",
 			centeredSlides: true,
 			spaceBetween: 20,
+			pagination: {
+				el: ".swiperHealth .swiper-pagination",
+				clickable: true,
+			},
 			navigation: {
 				nextEl: ".swiperHealth .swiper-button-next",
 				prevEl: ".swiperHealth .swiper-button-prev",
