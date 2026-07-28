@@ -2350,6 +2350,9 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
 .section-specialty-leader .block-specialty-leader .dr-big .info {
   width: calc(65% - 50px);
 }
+.section-specialty-leader .block-specialty-leader .dr-big .info h3 strong {
+  font-weight: 700;
+}
 .section-specialty-leader .block-specialty-leader .dr-big .info .name-position h3 {
   display: flex;
   flex-wrap: wrap;
