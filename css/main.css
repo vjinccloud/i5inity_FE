@@ -2350,7 +2350,7 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
 .section-specialty-leader .block-specialty-leader .dr-big .info {
   width: calc(65% - 50px);
 }
-.section-specialty-leader .block-specialty-leader .dr-big .info h3 strong {
+.section-specialty-leader .block-specialty-leader .dr-big .info strong {
   font-weight: 700;
 }
 .section-specialty-leader .block-specialty-leader .dr-big .info .name-position h3 {
@@ -2404,6 +2404,9 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
 }
 .section-specialty-leader .block-specialty-leader .dr-big .info .experience {
   margin-top: 20px;
+}
+.section-specialty-leader .block-specialty-leader .dr-big .info .experience strong {
+  font-weight: 700;
 }
 .section-specialty-leader .block-specialty-leader .dr-big .info .experience h4 {
   font-size: 16px;
@@ -2574,6 +2577,9 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
 }
 .section-expert-detail .block-expert-detail .dr-introduce .experience {
   margin-top: 20px;
+}
+.section-expert-detail .block-expert-detail .dr-introduce .experience strong {
+  font-weight: 700;
 }
 .section-expert-detail .block-expert-detail .dr-introduce .experience h4 {
   font-size: 16px;
@@ -2839,6 +2845,9 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
 .section-outpatient-hours .outpatient-hours .desc .time {
   color: #75777A;
   margin: 20px 0;
+}
+.section-outpatient-hours .outpatient-hours .desc .time strong {
+  font-weight: 700;
 }
 .section-outpatient-hours .outpatient-hours .desc .more a {
   display: inline-flex;
