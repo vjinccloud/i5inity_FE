@@ -1874,12 +1874,12 @@
     margin-top: 50px;    
     .block-ostetrics-care-treatment{
         .detail{
-            margin-top: 25px;
-            img{
-                width: 100%;
-            }
+            margin-top: 25px;            
             b{
                 font-weight: 700;
+            }
+            p{
+                text-align: center;
             }
             .chinese{
                 font-size: 16px;
@@ -1922,7 +1922,7 @@
     margin-top: 50px;
     .block-ostetrics-care-special{        
         .detail{
-            margin-top: 25px;
+            margin-top: 25px;           
             h3{
                 font-size: 20px;
                 font-weight: 600;
@@ -1940,6 +1940,9 @@
             }
             h4 + p{
                 margin-top: 5px;
+            }
+            P{
+                text-align: center;
             }
             .chinese-web + .chinese-mobile{
                 margin-top: 5px;

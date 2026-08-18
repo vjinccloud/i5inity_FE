@@ -201,6 +201,12 @@ h3, p {
   /*word-break: break-all;*/
 }
 
+img {
+  max-width: 100%;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+}
+
 .clear-fix {
   clear: both;
 }
@@ -3302,11 +3308,11 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
 .section-ostetrics-care-treatment .block-ostetrics-care-treatment .detail {
   margin-top: 25px;
 }
-.section-ostetrics-care-treatment .block-ostetrics-care-treatment .detail img {
-  width: 100%;
-}
 .section-ostetrics-care-treatment .block-ostetrics-care-treatment .detail b {
   font-weight: 700;
+}
+.section-ostetrics-care-treatment .block-ostetrics-care-treatment .detail p {
+  text-align: center;
 }
 .section-ostetrics-care-treatment .block-ostetrics-care-treatment .detail .chinese {
   font-size: 16px;
@@ -3365,6 +3371,9 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
 }
 .section-ostetrics-care-special .block-ostetrics-care-special .detail h4 + p {
   margin-top: 5px;
+}
+.section-ostetrics-care-special .block-ostetrics-care-special .detail P {
+  text-align: center;
 }
 .section-ostetrics-care-special .block-ostetrics-care-special .detail .chinese-web + .chinese-mobile {
   margin-top: 5px;
