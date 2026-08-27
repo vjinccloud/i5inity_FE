@@ -670,6 +670,15 @@
     padding-top: 100px;    
     .info{
         margin-top: 30px;
+        text-align: center;
+        h3{
+            font-size: 20px;
+            font-weight: 600;
+        }
+        p{
+            font-size: 16px;
+            color: #75777A;
+        }
         .chinese{
             text-align: center;
             font-size: 16px;
@@ -1426,6 +1435,11 @@
                     color: #133C2E;
                 }
             }
+            h3{
+                font-size: 20px;
+                font-weight: 600;
+                color: #75777A;
+            }
             .english{
                 font-size: 14px;
                 color: #75777A;
@@ -1874,7 +1888,8 @@
     margin-top: 50px;    
     .block-ostetrics-care-treatment{
         .detail{
-            margin-top: 25px;            
+            margin-top: 25px;     
+            text-align: center;       
             b{
                 font-weight: 700;
             }
@@ -1923,6 +1938,7 @@
     .block-ostetrics-care-special{        
         .detail{
             margin-top: 25px;           
+            text-align: center;
             h3{
                 font-size: 20px;
                 font-weight: 600;
@@ -1986,6 +2002,7 @@
                 color: #75777A;   
                 padding-left: 25px;      
                 margin-top: 5px;
+                text-align: left;
             }
             h4 + ul{
                 margin-top: 5px;
@@ -2066,10 +2083,14 @@
     .block-ostetrics-gentle-reminders{       
         .detail{
             margin-top: 25px;
+            text-align: center;
             b{
                 font-weight: 700;
             }
-            
+            p{
+                font-size: 15px;
+                color: #75777A;
+            }
             .chinese{
                 text-align: center;
                 font-size: 15px;
@@ -2093,7 +2114,9 @@
                 margin: 0 auto;  
                 font-size: 15px;
                 color: #75777A;    
-                padding-left: 25px     
+                padding-left: 25px;
+                text-align: left;
+                
             }
             h3 + ul{
                 margin-top: 5px;
@@ -2249,6 +2272,11 @@
         }        
         .info{
             margin-top: 50px;
+            h3{
+                text-align: center;
+                font-size: 20px;
+                color: #75777A;
+            }
             .chinese{
                 text-align: center;
                 font-size: 16px;
@@ -3308,6 +3336,7 @@
         .block-about-us{
             .about-us-info{
                 margin-top: 40px;
+                text-align: left;
             }
         } 
     } 
@@ -3419,6 +3448,7 @@
     }
     .section-vision{
         .info{
+            text-align: left;
             .chinese{
                 text-align: left;
             }
@@ -3581,6 +3611,7 @@
         margin-top: 50px;        
         .block-ostetrics-care-treatment{
             .detail{
+                text-align: left;
                 .chinese{
                     text-align: left;
                     &.chinese-web{
@@ -3593,12 +3624,16 @@
                 .english{
                     text-align: left;
                 }
+                p{
+                    text-align: left;
+                }
             }
-        }        
+        }         
     }
     .section-ostetrics-care-special{
         .block-ostetrics-care-special{
             .detail{
+                text-align: left;
                 .chinese{
                     text-align: left;
                     &.chinese-web{
@@ -3622,10 +3657,11 @@
                 }
             } 
         } 
-    } 
+    }     
     .section-ostetrics-gentle-reminders{
         .block-ostetrics-gentle-reminders{
             .detail{
+                text-align: left;
                 h3{
                     text-align: left;
                 }
