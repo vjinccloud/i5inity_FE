@@ -897,6 +897,9 @@ footer .section-footer-top .block-footer-top .img {
 footer .section-footer-top .block-footer-top .img img {
   width: 100%;
 }
+footer .section-footer-top .block-footer-top .img {
+  display: none;
+}
 footer .section-footer-top .block-footer-top .title-link-info-outer {
   background-position: center;
   background-repeat: no-repeat;
@@ -904,16 +907,13 @@ footer .section-footer-top .block-footer-top .title-link-info-outer {
   border-radius: 15vw 0 0 0;
 }
 footer .section-footer-top .block-footer-top .title-link-info {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 50px 0;
+  min-height: 500px;
 }
 footer .section-footer-top .block-footer-top .title-link-info .title h2 {
   color: #fff;
@@ -1128,12 +1128,17 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
   }
 }
 @media all and (max-width: 767px) {
+  footer .section-footer-top .block-footer-top .title-link-info {
+    padding: 0;
+    min-height: auto;
+  }
   footer .section-footer-top .block-footer-top .title-link-info .info .three-cols {
     display: block;
   }
   footer .section-footer-top .block-footer-top .title-link-info .info .three-cols .col {
     margin: 20px 0;
-    width: 100%;
+    padding: 0 15px;
+    width: calc(100% - 30px);
   }
   footer .section-footer-bottom {
     padding: 50px 0;
@@ -2051,6 +2056,9 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
   display: none;
   text-align: left;
 }
+.section-about-us .block-about-us .about-us-info .chinese .mobile p {
+  text-align: left !important;
+}
 .section-about-us .block-about-us .about-us-info .english {
   font-size: 14px;
   color: #75777A;
@@ -2058,6 +2066,9 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
 .section-about-us .block-about-us .about-us-info .english .mobile {
   display: none;
   text-align: left;
+}
+.section-about-us .block-about-us .about-us-info .english .mobile p {
+  text-align: left !important;
 }
 .section-about-us .block-about-us .about-us-info .chinese + .english {
   margin-top: 30px;
@@ -2259,6 +2270,8 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
   font-weight: 600;
   color: #201C1D;
   text-align: right;
+  word-break: break-all; /* 防止連續英文字母或網址撐破邊框 */
+  overflow-wrap: break-word; /* 讓長單字自動換行往下 */
 }
 .section-vision .vision-list .item .desc h3.english {
   font-size: 16px;
@@ -2267,6 +2280,8 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
   font-size: 16px;
   color: #666666;
   text-align: right;
+  word-break: break-all; /* 防止連續英文字母或網址撐破邊框 */
+  overflow-wrap: break-word; /* 讓長單字自動換行往下 */
 }
 .section-vision .vision-list .item .desc p.english {
   font-size: 12px;
@@ -2280,9 +2295,13 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
 }
 .section-vision .vision-list .item.reverse .desc h3 {
   text-align: left;
+  word-break: break-all; /* 防止連續英文字母或網址撐破邊框 */
+  overflow-wrap: break-word; /* 讓長單字自動換行往下 */
 }
 .section-vision .vision-list .item.reverse .desc p {
   text-align: left;
+  word-break: break-all; /* 防止連續英文字母或網址撐破邊框 */
+  overflow-wrap: break-word; /* 讓長單字自動換行往下 */
 }
 
 .section-brand-value {
@@ -3118,7 +3137,29 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
   padding-bottom: 50px;
 }
 .section-case-list .block-case-list .case-list-cate .cate-list-outer {
-  margin: 50px auto;
+  margin: 40px auto;
+  overflow-x: auto;
+  scrollbar-gutter: stable;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+.section-case-list .block-case-list .case-list-cate .cate-list-outer::-webkit-scrollbar-track {
+  box-shadow: none;
+  border-radius: 10px;
+  background: #fff;
+}
+.section-case-list .block-case-list .case-list-cate .cate-list-outer {
+  /* Handle */
+}
+.section-case-list .block-case-list .case-list-cate .cate-list-outer::-webkit-scrollbar-thumb {
+  background: #E8E8E8;
+  border-radius: 10px;
+}
+.section-case-list .block-case-list .case-list-cate .cate-list-outer {
+  /* Handle on hover */
+}
+.section-case-list .block-case-list .case-list-cate .cate-list-outer::-webkit-scrollbar-thumb:hover {
+  background: #7A7A7A;
 }
 .section-case-list .block-case-list .case-list-cate .cate-list {
   display: flex;
@@ -3126,6 +3167,7 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
   width: -moz-max-content;
   width: max-content;
   margin: 0 auto;
+  flex-shrink: 0;
 }
 .section-case-list .block-case-list .case-list-cate .cate-list a {
   display: inline-flex;
@@ -3185,6 +3227,12 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
   position: relative;
   font-size: large;
   margin-top: 30px;
+}
+.section-case-detail .block-case-detail .case-detail .detail table {
+  max-width: 100%;
+}
+.section-case-detail .block-case-detail .case-detail .detail table[border]:not([border="0"]) td, .section-case-detail .block-case-detail .case-detail .detail table[border]:not([border="0"]) th {
+  border: 1px solid #aaaaaa;
 }
 .section-case-detail .block-case-detail .case-detail .detail img {
   max-width: 100%;

@@ -522,6 +522,9 @@
                 .mobile{
                     display: none;
                     text-align: left;
+                    p{
+                      text-align: left !important;  
+                    }
                 }
             }
             .english{
@@ -530,6 +533,9 @@
                 .mobile{
                     display: none;
                     text-align: left;
+                    p{
+                      text-align: left !important;  
+                    }
                 }
             }
             .chinese + .english{
@@ -731,6 +737,8 @@
                     font-weight: 600;
                     color: #201C1D;
                     text-align: right;
+                    word-break: break-all; /* 防止連續英文字母或網址撐破邊框 */
+                    overflow-wrap: break-word; /* 讓長單字自動換行往下 */
                     &.english{
                         font-size: 16px;
                     }
@@ -739,6 +747,8 @@
                     font-size: 16px;
                     color: #666666;
                     text-align: right;
+                    word-break: break-all; /* 防止連續英文字母或網址撐破邊框 */
+                    overflow-wrap: break-word; /* 讓長單字自動換行往下 */
                     &.english{
                         font-size: 12px;
                     }
@@ -757,9 +767,13 @@
                 .desc{
                     h3{
                         text-align: left;
+                        word-break: break-all; /* 防止連續英文字母或網址撐破邊框 */
+                        overflow-wrap: break-word; /* 讓長單字自動換行往下 */
                     }
                     p{
                         text-align: left;
+                        word-break: break-all; /* 防止連續英文字母或網址撐破邊框 */
+                        overflow-wrap: break-word; /* 讓長單字自動換行往下 */
                     }
                 }
             }
@@ -1678,13 +1692,32 @@
     .block-case-list{
         .case-list-cate{           
             .cate-list-outer{
-                margin: 50px auto;
+                margin: 40px auto;
+                overflow-x: auto;       
+                scrollbar-gutter: stable;
+                padding-bottom: 5px;
+                padding-top: 5px;
+                &::-webkit-scrollbar-track {
+                    box-shadow: none; 
+                    border-radius: 10px;
+                    background: #fff; 
+                }   
+                /* Handle */
+                &::-webkit-scrollbar-thumb {
+                    background: $scrollbarGray01; 
+                    border-radius: 10px;
+                }                              
+                /* Handle on hover */
+                &::-webkit-scrollbar-thumb:hover {
+                    background:$scrollbarGray02;    
+                }         
             }
             .cate-list{                
                 display: flex;
                 justify-content: center; 
                 width: max-content;
                 margin: 0 auto;
+                flex-shrink: 0; 
                 a{
                     display: inline-flex;
                     align-items: center;
@@ -1749,6 +1782,12 @@
                 position: relative;
                 font-size: large;
                 margin-top: 30px;
+                table{
+                    max-width: 100%;
+                }
+                table[border]:not([border="0"]) td, table[border]:not([border="0"]) th {
+                    border: 1px solid #aaaaaa;
+                }
                 img{
                     max-width: 100%;
                     height: auto;

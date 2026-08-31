@@ -4,8 +4,13 @@ $(function() {
 	setMobileMenu();	
 	setSider();
 	setNaviToggle();
-
+	setTabScroll();
 });
+function setTabScroll(){
+	if($('.section-case-list .block-case-list .case-list-cate .cate-list').length>0){
+		
+	}
+}
 function setNaviToggle(){
 	if($('.header-div .had-sub-menu').length>0){
 		$('.header-div .had-sub-menu .link').hover(function(){
