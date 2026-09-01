@@ -2265,6 +2265,9 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
 .section-vision .vision-list .item .img img {
   width: 100%;
 }
+.section-vision .vision-list .item .desc {
+  padding-left: 20px;
+}
 .section-vision .vision-list .item .desc h3 {
   font-size: 22px;
   font-weight: 600;
@@ -2292,6 +2295,10 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
 .section-vision .vision-list .item.reverse .two-cols .col01 {
   margin-left: 35%;
   margin-right: -100%;
+}
+.section-vision .vision-list .item.reverse .desc {
+  padding-left: 0;
+  padding-right: 20px;
 }
 .section-vision .vision-list .item.reverse .desc h3 {
   text-align: left;
@@ -4283,6 +4290,14 @@ footer .section-footer-bottom .brand-links-copyright .copyright a {
   .section-vision .vision-list .item.reverse .two-cols .col01 {
     margin-left: 0;
     margin-right: 0;
+  }
+  .section-vision .vision-list .item.reverse .desc {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .section-vision .vision-list .item .desc {
+    padding-left: 0;
+    padding-right: 0;
   }
   .section-vision .vision-list .item .desc h3 {
     font-size: 20px;
